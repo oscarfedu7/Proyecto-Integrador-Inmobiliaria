@@ -17,3 +17,5 @@ Se venderán viviendas tanto económicas como viviendas un poco más costosas.
 Descripción de los integrantes del equipo:
 
 Oscar Fernández Durán: Soy estuduante de la licenciatura en ciencias físico-matemáticas. Tengo 21 años. Soy Mexicano. Me encanta aprender de todo.
+
+Mayra Vanessa Sillas Cavazos: Soy estudiante en de la Ingenieria en Tecnologias Computacionales, actualmente trabajo como desarrolladora web con Wordpress, tengo 23 años y estoy iniciando mi pripio negocio de paginas web.
