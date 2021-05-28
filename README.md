@@ -1,1 +1,19 @@
 # Grupo_8_Bits
+
+Punto 2)
+
+Nuestro E-Commerce será una inmobiliaria virtual, la cual tendrá los siguientes productos y/ó servicios:
+
+    Construcción de viviendas
+    Venta de viviendas
+    Alquiler de viviendas
+
+Entonces básicamente desarrollaremos una plataforma que tendrá el objetivo de conectar a los clientes con su vivienda deseada, la vivienda ideal para él.
+
+El publico objetivo será principalemente personas mayores a 30 y menores a 60 años, sin embargo, podemos estimar un rango mayor, que sería aproximado de 25-65 años. donde normalmente, personas mayores a 45 años compran su segunda o tercer vivienda.
+
+Se venderán viviendas tanto económicas como viviendas un poco más costosas.
+
+Descripción de los integrantes del equipo:
+
+Oscar Fernández Durán: Soy estuduante de la licenciatura en ciencias físico-matemáticas. Tengo 21 años. Soy Mexicano. Me encanta aprender de todo.
