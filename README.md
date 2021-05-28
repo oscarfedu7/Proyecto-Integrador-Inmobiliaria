@@ -19,3 +19,8 @@ Descripción de los integrantes del equipo:
 Oscar Fernández Durán: Soy estuduante de la licenciatura en ciencias físico-matemáticas. Tengo 21 años. Soy Mexicano. Me encanta aprender de todo.
 
 Mayra Vanessa Sillas Cavazos: Soy estudiante en de la Ingenieria en Tecnologias Computacionales, actualmente trabajo como desarrolladora web con Wordpress, tengo 23 años y estoy iniciando mi pripio negocio de paginas web.
+
+
+Sitios de referencia:
+1) https://urbania.pe/  Fue escogida por si interfase amigable, por su categorización estratégica y por el contenido.
+2) 
