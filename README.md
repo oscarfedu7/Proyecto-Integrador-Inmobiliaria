@@ -27,3 +27,6 @@ Sitios de referencia:
 3) https://www.properati.com.ar/?utm_source=properati.com&utm_medium=direct Da buenas ideas que podemos agregar al proyecto.
 4) https://century21mexico.com/ Es una empresa de bienes raices conocida, su interfaz es muy llamativa y de facil uso.
 5) https://www.rodagame.com/ Maneja una interfaz muy sencilla pero eso mismo hace que sea facil de manejar para el usuario.
+
+Usamos trello:
+https://trello.com/b/Dp4zWNxp/primer-sprint
