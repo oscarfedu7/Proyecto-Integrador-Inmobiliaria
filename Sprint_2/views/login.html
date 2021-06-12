@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link href="css/login.css" rel="stylesheet">
+
+</head>
+<body >
+
+
+<form action="/action_page.php" method="post" style="background-image: url('img/edificios.jpg');">
+  <div class="imgcontainer">
+    <img src="img/avatar.jpg" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname" class="label"><b>Username</b></label>
+    <center><input type="text" placeholder="Enter Username" name="uname" required></center>
+    <br>
+
+    <label for="psw" class="label"><b>Password</b></label>
+    <center><input type="password" placeholder="Enter Password" name="psw" required></center>
+        
+    <center><button type="submit">Login</button> </center>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container2" style="background-color:#f1f1f1">
+    <div class="acomodo">
+        <center><div><button type="button" class="cancelbtn">Volver</button></div></center>
+        <div><span class="psw"> <a href="#">¿Olvidaste la contraseña?</a> <a href="#">| Registarse</a></span></div>
+    </div> 
+</form>
+
+</body>
+</html>

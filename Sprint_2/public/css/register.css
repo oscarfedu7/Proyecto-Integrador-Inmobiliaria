@@ -1,0 +1,95 @@
+body {
+    background-image: url("./img/register.jpg");
+}
+
+form {
+    /* Centrar el formulario en la página */
+    margin: 0 auto;
+    width: 40vw;
+    /* Esquema del formulario */
+    padding: 10%;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  
+  input,
+  textarea {
+    /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+       Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+    font: 1em sans-serif;
+  
+    /* Tamaño uniforme del campo de texto */
+    width: 50vw;
+    box-sizing: border-box;
+  
+    /* Hacer coincidir los bordes del campo del formulario */
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Destacado adicional para elementos que tienen el cursor */
+    border-color: #000;
+  }
+  
+  textarea {
+    /* Alinear los campos de texto multilínea con sus etiquetas */
+    vertical-align: top;
+  
+    /* Proporcionar espacio para escribir texto */
+    height: 5em;
+  }
+  
+  .button {
+    /* Alinear los botones con los campos de texto */
+    padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+  }
+  
+  button {
+    /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+       entre las etiquetas y sus campos de texto */
+    margin-left: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 1em;
+    border: none;
+  }
+
+  .fondo-registro {
+      padding: 10vh;
+      position: static;
+      background-repeat: no-repeat;
+  }
+
+  h1 {
+      font-size: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: #000;
+  }
