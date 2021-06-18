@@ -21,6 +21,9 @@ app.get('/login', (req, res) => {
   app.get('/register', (req, res) => {
     res.sendFile('./register.html', { root: 'views'})
   })
+  app.get('/index', (req, res) => {
+    res.sendFile('./index.html', { root: 'views'})
+  })
 
 const port = process.env.PORT || 3003
 app.listen(port , () => {
