@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
     res.sendFile('./register.html', { root: 'views'})
   })
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3003
 app.listen(port , () => {
-  console.log(`App listening at http://localhost:${port}`)
+  console.log('App listening at http://localhost:${port}')
 })
 
 
