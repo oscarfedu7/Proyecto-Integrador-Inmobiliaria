@@ -9,16 +9,16 @@ app.use(express.urlencoded({
 app.get('/', (req, res) => {
   res.sendFile('./index.html', { root: 'views'})
 })
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile('./login.html', { root: 'views'})
   })
-  app.get('/', (req, res) => {
+  app.get('/productCart', (req, res) => {
     res.sendFile('./productCart.html', { root: 'views'})
   })
-  app.get('/', (req, res) => {
+  app.get('/productDetail', (req, res) => {
     res.sendFile('./productDetail.html', { root: 'views'})
   })
-  app.get('/', (req, res) => {
+  app.get('/register', (req, res) => {
     res.sendFile('./register.html', { root: 'views'})
   })
 
