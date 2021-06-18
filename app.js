@@ -1,14 +1,31 @@
-const express = require('express');
-const path = require('path');
-
-const app = express();
-
-const publicPath = path.resolve(__dirname, './public');
-app.use(express.static(publicPath));
-
-app.listen(3000, () => console.log('Servidor corriendo'));
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+app.use(express.static(__dirname + '/public'))
+app.use(express.urlencoded({
+  extended: true
+}))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
+  res.sendFile('./index.html', { root: 'views'})
 })
+app.get('/', (req, res) => {
+    res.sendFile('./login.html', { root: 'views'})
+  })
+  app.get('/', (req, res) => {
+    res.sendFile('./productCart.html', { root: 'views'})
+  })
+  app.get('/', (req, res) => {
+    res.sendFile('./productDetail.html', { root: 'views'})
+  })
+  app.get('/', (req, res) => {
+    res.sendFile('./register.html', { root: 'views'})
+  })
+
+const port = process.env.PORT || 3000
+app.listen(port , () => {
+  console.log(`App listening at http://localhost:${port}`)
+})
+
+
 
