@@ -10,22 +10,22 @@ app.set("view engine", "ejs");
 
 
 app.get('/', (req, res) => {
-  res.sendFile('./index.html', { root: 'views'})
+  res.render('index');
 })
 app.get('/login', (req, res) => {
-    res.sendFile('./login.html', { root: 'views'})
+    res.render('login');
   })
-  app.get('/productCart', (req, res) => {
-    res.sendFile('./productCart.html', { root: 'views'})
+app.get('/productCart', (req, res) => {
+    res.render('productCart');
   })
-  app.get('/productDetail', (req, res) => {
-    res.sendFile('./productDetail.html', { root: 'views'})
+app.get('/productDetail', (req, res) => {
+    res.render('productDetail');
   })
-  app.get('/register', (req, res) => {
-    res.sendFile('./register.html', { root: 'views'})
+app.get('/register', (req, res) => {
+    res.render('register');
   })
-  app.get('/index', (req, res) => {
-    res.sendFile('./index.html', { root: 'views'})
+app.get('/index', (req, res) => {
+    res.render('index');
   })
 
 const port = process.env.PORT || 3003
