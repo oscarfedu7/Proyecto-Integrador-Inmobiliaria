@@ -1,37 +1,23 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-app.use(express.static('../public'))
-app.use(express.urlencoded({
-  extended: true
-}))
+ 
+const express = require("express");
+const app = express();
+const path = require("path");
+const rutaMain = require("./routes/main");
+const rutaProductos = require("./routes/productos");
+//const rutaUsers = require("./routes/users");
+const PORT = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
-//app.set('views', './src/views');
 
-app.get('/', (req, res) => {
-  res.render('index');
-})
-app.get('/login', (req, res) => {
-    res.render('login');
-  })
-app.get('/productCart', (req, res) => {
-    res.render('productCart');
-  })
-app.get('/productDetail', (req, res) => {
-    res.render('productDetail');
-  })
-app.get('/register', (req, res) => {
-    res.render('register');
-  })
-app.get('/index', (req, res) => {
-    res.render('index');
-  })
+app.use(express.static(path.join(__dirname, "../public")));
 
-const port = process.env.PORT || 3003
-app.listen(port , () => {
-  console.log('App listening at http://localhost:${port}')
-})
+app.use("/", rutaMain);
+app.use("/productos", rutaProductos);
 
+
+
+app.listen(PORT, () => {
+    console.log("Escuchando en http://localhost:" + PORT + "/");
+});
 
 
