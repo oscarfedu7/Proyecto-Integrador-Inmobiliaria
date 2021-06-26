@@ -7,7 +7,7 @@ const controller = {
         res.status(200).render("productos/productDetail");
     },
     productos: (req, res) => {
-        res.status(200).render("productos/productDetail"); //aquí van a ir los productos
+        res.status(200).render("productos/productos"); //aquí van a ir los productos
     },
 };
 
