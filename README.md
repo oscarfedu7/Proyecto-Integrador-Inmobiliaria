@@ -30,3 +30,6 @@ Sitios de referencia:
 
 Usamos trello:
 https://trello.com/b/Dp4zWNxp/primer-sprint
+
+link de heroku:
+https://grupo8-bits.herokuapp.com/index
