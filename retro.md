@@ -16,4 +16,6 @@ Creo que en el Sprint 2 trabajamos mucho mejor que en el Sprint 1, nos pusimos d
 Creo que algo que nos faltó un poco en el sprint 2 es comunicar más ideas de como queríamos que fuera el diseño de los .html. Creo que algo bueno de lo que hicimos fue ponernos de acuerdo sin problemas y entregar todo a tiempo, ademas de apoyarnos siempre que alguno tenía algún problema. 
 Algo que espero trabajemos mejor en el sprnt 3 es que nos comuniquemos más. (Oscar Fernández)
 
+El sprint 2 fue mas sencillo ponernos de acuerdo y terminar todos los puntos pedidos con el tiempo creo que hemos trabajado mejor. (Mayra Sillas)
+
 
