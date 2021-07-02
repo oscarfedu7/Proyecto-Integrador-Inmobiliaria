@@ -9,6 +9,7 @@ const controller = {
     productos: (req, res) => {
         res.status(200).render("productos/productos"); //aquí van a ir los productos
     },
+    
 };
 
 module.exports = controller;
