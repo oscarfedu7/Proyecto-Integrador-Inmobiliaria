@@ -1,7 +1,7 @@
 
 const controller = {
     index: (req, res) => {
-        res.status(200).render("index");
+        res.status(200).render("./views/index");
     },
     login: (req, res) => {
         res.status(200).render("login");
