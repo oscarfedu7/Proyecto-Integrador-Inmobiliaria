@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use("/", rutaMain);
+app.use("/main", rutaMain);
 app.use("/productos", rutaProductos);
 app.use("/users", rutaUsers);
 
