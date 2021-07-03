@@ -8,6 +8,8 @@ const rutaUsers = require("./routes/users");
 //const rutaUsers = require("./routes/users");
 const PORT = process.env.PORT || 3000;
 app.set('views', __dirname + '/views');
+app.set('productos', __dirname + '/views/productos');
+app.set('users', __dirname + '/views/users');
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "../public")));
