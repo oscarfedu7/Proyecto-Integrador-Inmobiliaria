@@ -217,6 +217,7 @@ footer{
     box-sizing: border-box;
 }
 .inputs{
+    padding-top: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

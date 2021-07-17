@@ -3,6 +3,13 @@
 p{
     margin-bottom: 1.6em;
 }
+.fecha{
+    padding-left: 5px ;
+    padding-right: 5px;
+}
+.spanV{
+    font-weight: bold;
+}
 
 .container{
     width: 85%;

@@ -39,13 +39,13 @@
                 <input type="text" multiple name="tipo-vivienda" id="tipo-vivienda" list="drawfemails" required size="64" placeholder="Tipo de vivienda">
 
                 <datalist id="drawfemails">
-                    <option value="casa">Casas</option>
-                    <option value="Departamento">Departamentos</option>
-                    <option value="Local">Locales</option>
-                    <option value="Terreno">Terrenos</option>
-                    <option value="Oficina">Oficinas</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Departamento">Departamento</option>
+                    <option value="Local">Local</option>
+                    <option value="Terreno">Terreno</option>
+                    <option value="Oficina">Oficina</option>
                 </datalist>
-                <br><br><br>
+                <br><br>
 
 
                 <input type="ciudad" multiple name="ciudad" id="ciudad" list="drawfemails2" required size="64" placeholder="Seleccione ciudad o palabra clave">
@@ -70,127 +70,34 @@
 
     <div class="cont-gen-prod" id="cont-gen-prod">
         <h2>Casas</h2>
+
+       
         <div class="contenedor-products">
-            <div class="conte ">
-                    <div class="card">
-                        <img src="../img/casa1.jpg" alt="">
-                    </div>
-                    <div class="informacion">
-                        <h1>LA FLORESTA
-                            Camacho, La Molina</h1>
-                        <p class="fecha">
-                            Venta de Casa en La Molina
-                        </p>
-                    </div>
-                    <div class="precio">
-                        <div class="box-precio">
-                            <span class="precio1"><strike>$2,000,000</strike> </span>
-                        <span class="precio2"><b>$1,300,000</b></span>
-                        </div>
-                        <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-            </div>
-            <div class="conte ">
-                        <div class="card">
-                            <img src="../img/casa2.jpg" alt="">
-                        </div>
-                        <div class="informacion">
-                            <h1>LA FLORESTA
-                                Camacho, La Molina</h1>
-                        <p class="fecha">
-                            Venta de Casa en La Molina
-                        </p>
-                        </div>
-                        <div class="precio">
-                            <div class="box-precio">
-                                <span class="precio1"><strike>$2,000,000</strike> </span>
-                            <span class="precio2"><b>$1,300,000</b></span>
+            <% for(let i = 0; i < products.length; i ++) { %>
+                <% if(products[i].category.includes("Casa")){ %>
+                    <div class="conte ">
+                            <div class="card">
+                                <img src="../img/<%=products[i].image%>" alt="">
                             </div>
-                            <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                            <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                        </div>
-            </div>
-            <div class="conte ">
-                    <div class="card">
-                        <img src="../img/casa3.jpeg" alt="">
+                            <div class="informacion">
+                                <h1><%= products[i].city +", "+ products[i].address%> </h1>
+                                <p class="fecha">
+                                    <%= products[i].description %>
+                                </p>
+                            </div>
+                            <div class="precio">
+                                <div class="box-precio">
+                                    <br><br>
+                                    <span class="spanV"><%= products[i].type %></span>
+                                    <span class="precio1"><strike><%="$"+ (products[i].price+1000*(i+1)) %></strike> </span>
+                                <span class="precio2"><b><%="$"+ products[i].price %></b></span>
+                                </div>
+                                <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
+                                <span class="shoping"><i class="fas fa-cart-plus"></i></span>
+                            </div>
                     </div>
-                    <div class="informacion">
-                        <h1>LA FLORESTA
-                            Camacho, La Molina</h1>
-                    <p class="fecha">
-                        Venta de Casa en La Molina
-                    </p>
-                    </div>
-                    <div class="precio">
-                        <div class="box-precio">
-                            <span class="precio1"><strike>$2,000,000</strike> </span>
-                        <span class="precio2"><b>$1,300,000</b></span>
-                        </div>
-                        <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa4.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa5.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa6.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="../productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>       
+                <%}%>
+            <% }%>     
         </div>
     </div>
 
@@ -198,126 +105,32 @@
     <div class="cont-gen-prod">
         <h2>Departamentos</h2>
         <div class="contenedor-products">
-            <div class="conte ">
-                    <div class="card">
-                        <img src="../img/casa1.jpg" alt="">
-                    </div>
-                    <div class="informacion">
-                        <h1>LA FLORESTA
-                            Camacho, La Molina</h1>
-                    <p class="fecha">
-                        Venta de Casa en La Molina
-                    </p>
-                    </div>
-                    <div class="precio">
-                        <div class="box-precio">
-                            <span class="precio1"><strike>$2,000,000</strike> </span>
-                        <span class="precio2"><b>$1,300,000</b></span>
-                        </div>
-                        <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-            </div>
-            <div class="conte ">
-                        <div class="card">
-                            <img src="../img/casa2.jpg" alt="">
-                        </div>
-                        <div class="informacion">
-                            <h1>LA FLORESTA
-                                Camacho, La Molina</h1>
-                        <p class="fecha">
-                            Venta de Casa en La Molina
-                        </p>
-                        </div>
-                        <div class="precio">
-                            <div class="box-precio">
-                                <span class="precio1"><strike>$2,000,000</strike> </span>
-                            <span class="precio2"><b>$1,300,000</b></span>
+
+            <% for(let i = 0; i < products.length; i ++) { %>
+                <% if(products[i].category.includes("Departamento")){ %>
+                    <div class="conte ">
+                            <div class="card">
+                                <img src="../img/<%=products[i].image%>" alt="">
                             </div>
-                            <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                            <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                        </div>
-            </div>
-            <div class="conte ">
-                    <div class="card">
-                        <img src="../img/casa3.jpeg" alt="">
+                            <div class="informacion">
+                                <h1><%= products[i].city +", "+ products[i].address%> </h1>
+                                <p class="fecha">
+                                    <%= products[i].description %>
+                                </p>
+                            </div>
+                            <div class="precio">
+                                <div class="box-precio">
+                                    <br><br>
+                                    <span class="spanV"><%= products[i].type %></span>
+                                    <span class="precio1"><strike><%="$"+ (products[i].price+1000*(i+1)) %></strike> </span>
+                                <span class="precio2"><b><%="$"+ products[i].price %></b></span>
+                                </div>
+                                <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
+                                <span class="shoping"><i class="fas fa-cart-plus"></i></span>
+                            </div>
                     </div>
-                    <div class="informacion">
-                        <h1>LA FLORESTA
-                            Camacho, La Molina</h1>
-                    <p class="fecha">
-                        Venta de Casa en La Molina
-                    </p>
-                    </div>
-                    <div class="precio">
-                        <div class="box-precio">
-                            <span class="precio1"><strike>$2,000,000</strike> </span>
-                        <span class="precio2"><b>$1,300,000</b></span>
-                        </div>
-                        <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                        <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                    </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa4.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa5.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>
-            <div class="conte ">
-                <div class="card">
-                    <img src="../img/casa6.jpg" alt="">
-                </div>
-                <div class="informacion">
-                    <h1>LA FLORESTA
-                        Camacho, La Molina</h1>
-                <p class="fecha">
-                    Venta de Casa en La Molina
-                </p>
-                </div>
-                <div class="precio">
-                    <div class="box-precio">
-                        <span class="precio1"><strike>$2,000,000</strike> </span>
-                    <span class="precio2"><b>$1,300,000</b></span>
-                    </div>
-                    <div class="button-detalle"><button class="button"><a href="productos/productDetail">Ver detalle</a></button></div>
-                    <span class="shoping"><i class="fas fa-cart-plus"></i></span>
-                </div>
-            </div>       
+                <%}%>
+            <% }%>   
         </div>
     </div>
 

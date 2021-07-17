@@ -14,30 +14,37 @@
 </head>
 <body>
     <%- include('../partials/header') %>
-    <div>
-        <h2 id="titulo-det">Detalle de Producto</h2>
+    <div class="detalleTitulo">
+        <h2 id="titulo-det">Detalle de Producto </h2>
     </div>
 
     <div id="general">
         <div id="part1">
             <div id="imagen-casa">
-                <img src="../img/casa1.jpg" alt="">
+                <img src="../img/<%= product.image%>" alt="">
             </div>
         </div>
         <div id="part2">
-            <div id="mini-descr">
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, assumenda rerum obcaecati nobis labore culpa enim porro ducimus, ipsum molestiae, ratione quaerat sunt incidunt velit fugiat expedita ex fugit totam.</h3>
-            </div>
-            <div id="precio">
-                <h4>Precio: $6,000,000</h4>
+            <h2><%= product.type +" de " + product.category %></h2>
+            <div id="amplia-descr">
+                <h3><%= "Descripción: "+product.description %></h3>
             </div>
             <div id="amplia-descr">
-                <h5>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam excepturi hic odio? Saepe nulla excepturi fuga placeat deserunt? Minima nostrum fugit excepturi a illum pariatur porro quod inventore velit cupiditate.</h5>
+                <h3><%= "Ciudad: "+product.city %></h3>
+            </div>
+            <div id="amplia-descr">
+                <h3><%= "Dirección: "+product.address %></h3>
+            </div>
+            <div id="amplia-descr">
+                <h3><%= "Tipo: "+product.type %></h3>
+            </div>
+            <div id="precio">
+                <h4><%="Precio: $"+ product.price%></h4>
             </div>
         </div>
         <div id="part3">
             <div id="precio2">
-                <h3>$6,000,000</h3>
+                <h3><%="Precio: $"+ product.price%></h3>
             </div>
             <div id="btn-car">
                 <input type="button" value="Agregar al carrito">
