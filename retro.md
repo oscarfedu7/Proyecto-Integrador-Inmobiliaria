@@ -19,3 +19,6 @@ Algo que espero trabajemos mejor en el sprnt 3 es que nos comuniquemos más. (Os
 El sprint 2 fue mas sencillo ponernos de acuerdo y terminar todos los puntos pedidos con el tiempo creo que hemos trabajado mejor. (Mayra Sillas)
 
 
+Retrospectiva iniciado el sprint 4
+
+Creo que conforme vamos avanzando las tareas salen mas rapido y logramos comunicarnos mejor. (Mayra Sillas)
