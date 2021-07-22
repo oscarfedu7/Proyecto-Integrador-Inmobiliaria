@@ -3,7 +3,7 @@
     "id": 1,
     "city": "Queretaro",
     "description": "Casa de 200 metros cuadrados, 5 recamaras y 3 baños",
-    "price": 1300000,
+    "price": "1300000",
     "image": "casa1.jpg",
     "category": "Casa",
     "address": "Lomas verdes, #123 ",
