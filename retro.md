@@ -21,4 +21,4 @@ El sprint 2 fue mas sencillo ponernos de acuerdo y terminar todos los puntos ped
 
 Retrospectiva iniciado el sprint 4
 
-Creo que conforme vamos avanzando las tareas salen mas rapido y logramos comunicarnos mejor. (Mayra Sillas)
+Creo que conforme vamos avanzando las tareas salen mas rapido y logramos comunicarnos mejor. (Mayra Sillas).
