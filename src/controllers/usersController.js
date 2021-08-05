@@ -13,11 +13,21 @@ const controller = {
     },
     create: (req, res) => {
         const productInfo = req.body;
-        products.push({
-          ...productInfo,
-          id: products.length + 1,
-          image: "casa2.jpg",
-        });
+        let indice = products.length-1;
+        if(req.file){
+          products.push({
+            ...productInfo,
+            image:req.file.filename,
+            id: products[indice].id+1,
+          });
+        }
+        else{
+          products.push({
+            ...productInfo,
+            image:"no-image-found.png",
+            id: products[indice].id+1,
+          });
+        }
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect("/productos/#cont-gen-prod");
     },
