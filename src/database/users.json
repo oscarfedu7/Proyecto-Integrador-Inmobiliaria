@@ -66,69 +66,47 @@
     "id": 6
   },
   {
-    "firstName": "lalo",
-    "lastName": "Hernandez",
-    "email": "lal@gmail.com",
-    "city": "Ixtapa",
+    "firstName": "Karina",
+    "lastName": "Abraham",
+    "email": "kari9@gmail.com",
+    "city": "Yucatan",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "ffff",
+    "password": "$2a$10$VEA6c.F2U1pseXU9vglVE.hVondnjkLl7Ax09CYLcDYajeGwIgXMe",
     "image": "avatar.jpg",
     "id": 7
   },
   {
+    "id": 8,
+    "firstName": "Karina",
+    "lastName": "Abraham",
+    "email": "kari9@gmail.com7",
+    "city": "Yucatan",
+    "address": "Monumento del noreste, 134",
+    "codigo_postal": "89065",
+    "password": "$2a$10$eoRJ82UJyQzVWflOVLX3M.KO7CvNyKP1gJLa57.wEOW9p2tRRFDs6",
+    "image": "avatar.jpg"
+  },
+  {
+    "id": 9,
     "firstName": "lalo",
     "lastName": "Hernandez",
     "email": "lal@gmail.com",
     "city": "Ixtapa",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "ggggg",
-    "image": "avatar.jpg",
-    "id": 8
+    "password": "$2a$10$W3gaMkcu1k4Rb3yWZHTuU.Omfuz5JillMbzn8.EGAcyibjOBvo/j2",
+    "image": "avatar.jpg"
   },
   {
-    "firstName": "Omar",
-    "lastName": "Campo",
-    "email": "omardu@gmail.com",
-    "city": "Monterrey",
-    "address": "Vasco de quiroga, #1234",
-    "codigo_postal": "58256",
-    "password": "77777754",
-    "image": "avatar.jpg",
-    "id": 9
-  },
-  {
-    "firstName": "Felipe",
-    "lastName": "Alvares",
-    "email": "felip.alva@gmail.com",
-    "city": "Leon",
-    "address": "Monumento del noreste, 134",
-    "codigo_postal": "89065",
-    "password": "789052",
-    "image": "avatar.jpg",
-    "id": 10
-  },
-  {
-    "firstName": "Oscar",
-    "lastName": "Fernández",
-    "email": "oscaredu@gmail.com",
-    "city": "Morelia",
-    "address": "LOmas de hidalgo, 145",
-    "codigo_postal": "58250",
-    "password": "532525325",
-    "image": "avatar.jpg",
-    "id": 11
-  },
-  {
-    "firstName": "Andrea",
-    "lastName": "Martinez",
-    "email": "adnri_lila@live.com.mx",
+    "id": 10,
+    "firstName": "lalo",
+    "lastName": "Hernandez",
+    "email": "lal5@gmail.com",
     "city": "Guadalajara",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "96574573",
-    "image": "avatar.jpg",
-    "id": 12
+    "password": "$2a$10$Tr.mqeaLzfQ.FPN3Z.0WcOuSOL7Fcx22.eRFj2CjP4g7id8QmxdBK",
+    "image": "avatar.jpg"
   }
 ]

@@ -28,16 +28,18 @@ const validations=[
     body('password').isLength({min:6}).notEmpty().withMessage('Debes de escribir una contraseña con al menos 6 carácteres'),
     body('image').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
 		
-		if (!file) {
-			throw new Error('Tienes que subir una imagen');
-		} else {
+		//if (!file) {
+		//	throw new Error('Tienes que subir una imagen');
+	//	} else {
+        if(file){
 			let fileExtension = path.extname(file.originalname);
 			if (!acceptedExtensions.includes(fileExtension)) {
 				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
 			}
-		}
+        }
+	//	}
 
 		return true;
 	})

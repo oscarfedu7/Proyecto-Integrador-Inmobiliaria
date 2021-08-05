@@ -46,10 +46,10 @@
       <input type="email" id="mail" name="email" class="<%=locals.errors && errors.email ? 'fill' : null %>"
       value="<%=locals.oldData ? oldData.email : null %>"/>
       <%if(locals.errors && errors.email){%>
-        <div class="text-danger">
-          <!--<%= errors.email.msg%>-->
-          Escribe un email válido
-        </div>
+          <div class="text-danger">
+            <%= errors.email.msg%>
+            Escribe un email válido
+          </div>
     <%}%>
     </li>
     <li>

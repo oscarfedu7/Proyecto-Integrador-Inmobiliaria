@@ -5,12 +5,15 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
+    //Muestra la vista de crear producto
     crear: (req, res) => {
         res.status(200).render("users/crearProducto");
     },
+    //Muestra la parte de editar del producto
     editar: (req, res) => {
         res.status(200).render("users/editarProducto");
     },
+    //Crea el producto
     create: (req, res) => {
         const productInfo = req.body;
         let indice = products.length-1;
@@ -31,6 +34,7 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect("/productos/#cont-gen-prod");
     },
+
     edit: (req, res) => {
         const productToEdit = products.find((product) => {
           return product.id == req.params.id;      
@@ -42,6 +46,7 @@ const controller = {
           res.render("error");
         }
       },
+
       update: (req, res) => {
         const productInfo = req.body;
         const productIdex = products.findIndex(producto =>{
