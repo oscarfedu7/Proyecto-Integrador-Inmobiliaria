@@ -55,7 +55,11 @@
                     <li><a href="../index">Inicio</a></li>
                     <li><a href="../productos/#cont-gen-prod">Productos</a></li>
                     <li><a href="../productos/productCart">Carrito</a></li>
+
+            <% if(locals.isLogged && locals.isPermited){ %>
                     <li><a href="../users/crearProducto">Crear Producto</a></li>
+            <%}%>
+            
                 </ul>
             </nav>
 

@@ -50,26 +50,6 @@
     "image": "casa2.jpg"
   },
   {
-    "city": "Chihuahua",
-    "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
-    "price": "76767",
-    "category": "Departamento",
-    "address": "Vasco de quiroga, #1234",
-    "type": "Venta",
-    "id": 6,
-    "image": "casa2.jpg"
-  },
-  {
-    "city": "Guadalajara",
-    "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
-    "price": "555555",
-    "category": "Casa",
-    "address": "Monumento del noreste, 134",
-    "type": "Venta",
-    "image": "group-1628030909598.jpg",
-    "id": 7
-  },
-  {
     "city": "Monterrey",
     "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
     "price": "56789098",
