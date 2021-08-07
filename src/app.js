@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const morgan = require("morgan");
 const session = require("express-session");
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const cookies = require("cookie-parser");
 
 
 //Rutas
@@ -30,6 +31,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }));
+
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 

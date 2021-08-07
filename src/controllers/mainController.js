@@ -28,6 +28,7 @@ const controller = {
         });
     },
     register: (req, res) => {
+        res.cookie('testing', 'Hola mundo puto',{maxAge:1000*30});
         res.status(200).render("register");
     },
     addUser: (req, res) => {
@@ -62,6 +63,7 @@ const controller = {
   //      let indice = users.length-1; 
         let imagen;
         if(req.file){
+            console.log(req.file.filename);
             imagen = req.file.filename;
         }
         else{
