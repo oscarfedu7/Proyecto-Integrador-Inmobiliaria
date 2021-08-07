@@ -16,6 +16,17 @@ const controller = {
     login: (req, res) => {
         res.status(200).render("login");
     },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect("/");
+    },
+    perfil: (req, res) => {
+        console.log("estas en login");
+        console.log(req.session);
+        res.status(200).render("perfil", {
+            user: req.session.userLogged
+        });
+    },
     register: (req, res) => {
         res.status(200).render("register");
     },
@@ -32,6 +43,7 @@ const controller = {
             });
         }
         console.log(userInDB);
+
         //si ya está registrado
         if (userInDB) {
             console.log(userInDB);
@@ -87,6 +99,35 @@ const controller = {
     },
     deleteUser: (req, res) => {
         user.delete(req.body.id);
+    },
+
+    loginProcess: (req, res) =>{
+        let userToLogin = user.findByField('email', req.body.email);
+        if(userToLogin){
+            let isPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(isPassword){ 
+                delete userToLogin.password
+                req.session.userLogged = userToLogin;
+                return res.redirect("/perfil");
+            }
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Contaseña incorrecta'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Este email no está registado'
+                }
+            },
+            oldData: req.body
+        });
+
     }
 
 };

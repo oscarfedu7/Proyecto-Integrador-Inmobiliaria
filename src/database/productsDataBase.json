@@ -30,12 +30,12 @@
     "type": "Renta"
   },
   {
-    "city": "Morelia",
+    "city": "Queretaro",
     "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
     "price": "2150000",
     "category": "Casa",
     "address": "Vasco de quiroga, #1234",
-    "type": "Renta",
+    "type": "Venta",
     "id": 4,
     "image": "casa2.jpg"
   },
@@ -78,5 +78,15 @@
     "type": "Venta",
     "image": "no-image-found.png",
     "id": 8
+  },
+  {
+    "city": "Guadalajara",
+    "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
+    "price": "3242523",
+    "category": "Casa",
+    "address": "Monumento del noreste, 134",
+    "type": "Venta",
+    "image": "group-1628270431086.jpg",
+    "id": 9
   }
 ]

@@ -6,6 +6,8 @@ const path = require("path");
 const methodOverride = require('method-override');
 const morgan = require("morgan");
 const session = require("express-session");
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 
 //Rutas
 const rutaMain = require("./routes/main");
@@ -28,6 +30,7 @@ app.use(session({
     resave:false,
     saveUninitialized:false
 }));
+app.use(userLoggedMiddleware);
 
 
 app.use("/", rutaMain);

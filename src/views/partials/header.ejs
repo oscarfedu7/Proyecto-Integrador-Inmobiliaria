@@ -26,6 +26,8 @@
             </div>
         </div>
     
+
+        <% if(!locals.isLogged){ %>
         <div class="login">
             <div class="login1">
                 <div>
@@ -37,6 +39,7 @@
                 </div>
             </div>
         </div>
+        <%}%>
     
     </div>
     <!-- info End -->
@@ -55,6 +58,21 @@
                     <li><a href="../users/crearProducto">Crear Producto</a></li>
                 </ul>
             </nav>
-    
+
+
+            <% if(locals.isLogged){ %>
+            <div class="dropdown">
+                <button class="dropbtn"><%=locals.firstName%> <%=locals.lastName%></button>
+                <div class="dropdown-content">
+                <a href="../perfil">Perfil</a>
+                <a href="../logout">Cerrar sesión</a>
+                </div>
+              </div>
+
+            <div>
+            <img src="../img/users/<%=locals.image%>" width="100px" alt="Flowers" class="foto-perfil"> 
+            
+            <%}%>
         </div>
     </div>
+</div>

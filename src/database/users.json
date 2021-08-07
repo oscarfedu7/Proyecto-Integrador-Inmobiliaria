@@ -1,112 +1,68 @@
 [
   {
     "id": 1,
-    "first_name": "Ronica",
-    "last_name": "Monday",
-    "email": "rmondayd@phpbb.com",
-    "city": "Morelia",
-    "address": "Av. Brigadeiro Faria Lima, 2170",
-    "codigo_postal": "12227-000",
-    "image": "users/avatar.jpg",
-    "password": "EL5utEV3"
+    "firstName": "Felipe",
+    "lastName": "Alvares",
+    "email": "felip.alva@gmail.com",
+    "city": "Leon",
+    "address": "Monumento del noreste, 134",
+    "codigo_postal": "89065",
+    "password": "$2a$10$Zgrxt5dRYCgDGWjJJloOjeeOpJyRPMTUCxpHnNeMenBoqfym0w1DS",
+    "image": "group-1628270377645.jpg"
   },
   {
     "id": 2,
-    "first_name": "Oscar",
-    "last_name": "Fernández",
-    "email": "oscarfd@live.com.mx",
-    "city": "Morelia",
-    "address": "Av. Correjidora, 2170",
-    "codigo_postal": "12227-000",
-    "image": "users/avatar2.jpeg",
-    "password": "EL5utEV3"
-  },
-  {
-    "firstName": "Omar",
-    "lastName": "Campo",
-    "email": "omardu@gmail.com",
-    "city": "Monterrey",
-    "address": "Vasco de quiroga, #1234",
-    "codigo_postal": "58256",
-    "password": "2113",
-    "image": "group-1628029958247.jpeg",
-    "id": 3
-  },
-  {
-    "firstName": "Omar",
-    "lastName": "Campo",
-    "email": "omardu@gmail.com",
-    "city": "Monterrey",
-    "address": "Vasco de quiroga, #1234",
-    "codigo_postal": "58256",
-    "password": "jajaja",
-    "image": "avatar.jpg",
-    "id": 4
-  },
-  {
     "firstName": "Oscar",
     "lastName": "Fernández",
     "email": "oscaredu@gmail.com",
     "city": "Morelia",
     "address": "LOmas de hidalgo, 145",
     "codigo_postal": "58250",
-    "password": "fafa",
-    "image": "avatar.jpg",
-    "id": 5
+    "password": "$2a$10$oDM0Xj9E5b7GzeWl.fOEl.prr.r.k95UYZF1NyFJe2U8wu3GQf0XK",
+    "image": "avatar.jpg"
   },
   {
+    "id": 3,
+    "firstName": "Omar",
+    "lastName": "Campo",
+    "email": "omardu@gmail.com",
+    "city": "Monterrey",
+    "address": "Vasco de quiroga, #1234",
+    "codigo_postal": "58256",
+    "password": "$2a$10$fwoHtBy4lio7whio2DHyNOQ2sBfjlNPwZaZdOYZcGAfo9tRFqGG8G",
+    "image": "group-1628285793922.jpeg"
+  },
+  {
+    "id": 4,
     "firstName": "Andrea",
     "lastName": "Martinez",
     "email": "adnri_lila@live.com.mx",
     "city": "Guadalajara",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "andilove",
-    "image": "group-1628092488355.jpeg",
-    "id": 6
+    "password": "$2a$10$CEzUNyt4SPTTvntxHTVG7uuAGbAlGFyKlcxOwpM46aTkK88BozftW",
+    "image": "group-1628286061269.jpg"
   },
   {
-    "firstName": "Karina",
-    "lastName": "Abraham",
-    "email": "kari9@gmail.com",
-    "city": "Yucatan",
-    "address": "Monumento del noreste, 134",
-    "codigo_postal": "89065",
-    "password": "$2a$10$VEA6c.F2U1pseXU9vglVE.hVondnjkLl7Ax09CYLcDYajeGwIgXMe",
-    "image": "avatar.jpg",
-    "id": 7
-  },
-  {
-    "id": 8,
+    "id": 5,
     "firstName": "Karina",
     "lastName": "Abraham",
     "email": "kari9@gmail.com7",
     "city": "Yucatan",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "$2a$10$eoRJ82UJyQzVWflOVLX3M.KO7CvNyKP1gJLa57.wEOW9p2tRRFDs6",
-    "image": "avatar.jpg"
+    "password": "$2a$10$8rtncM0HKRAFgHDmQiimwuDz8p0Gk7GsDoeaMdFAyl.rtNTck1Lkm",
+    "image": "group-1628360354313.jpeg"
   },
   {
-    "id": 9,
+    "id": 6,
     "firstName": "lalo",
     "lastName": "Hernandez",
     "email": "lal@gmail.com",
     "city": "Ixtapa",
     "address": "Monumento del noreste, 134",
     "codigo_postal": "89065",
-    "password": "$2a$10$W3gaMkcu1k4Rb3yWZHTuU.Omfuz5JillMbzn8.EGAcyibjOBvo/j2",
-    "image": "avatar.jpg"
-  },
-  {
-    "id": 10,
-    "firstName": "lalo",
-    "lastName": "Hernandez",
-    "email": "lal5@gmail.com",
-    "city": "Guadalajara",
-    "address": "Monumento del noreste, 134",
-    "codigo_postal": "89065",
-    "password": "$2a$10$Tr.mqeaLzfQ.FPN3Z.0WcOuSOL7Fcx22.eRFj2CjP4g7id8QmxdBK",
-    "image": "avatar.jpg"
+    "password": "$2a$10$A6qW7w74kPMtdjgzOF2yWOHOQm4RuemhOyawSyLZhdzigwt1TuOom",
+    "image": "group-1628360388393.jpg"
   }
 ]
