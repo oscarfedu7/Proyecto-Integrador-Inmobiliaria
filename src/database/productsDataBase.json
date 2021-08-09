@@ -20,16 +20,6 @@
     "type": "Renta"
   },
   {
-    "id": 3,
-    "city": "Morelia",
-    "description": "Departamento de 250 metros cuadrados, 3 recamaras y 1 baño",
-    "price": 800000,
-    "image": "casa2.jpg",
-    "category": "Departamento",
-    "address": "El campestre, #23 ",
-    "type": "Renta"
-  },
-  {
     "city": "Queretaro",
     "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
     "price": "2150000",
@@ -68,5 +58,15 @@
     "type": "Venta",
     "image": "group-1628270431086.jpg",
     "id": 9
+  },
+  {
+    "city": "Leon",
+    "description": "Casa de 200 metros cuadrados, 5 recamaras, cocina equipada, 2 baños y estacionamiento",
+    "price": "1500000",
+    "category": "Departamento",
+    "address": "Monumento del noreste, 134",
+    "type": "Renta",
+    "image": "group-1628441128988.jpg",
+    "id": 10
   }
 ]
