@@ -108,5 +108,16 @@
     "codigo_postal": "45678",
     "password": "$2a$10$Dx82/OuEm9uhZpq1v36miOstJkd9VtLiKzMEehxZEcII2pQHK4Pbi",
     "image": "group-1628372446509.jpeg"
+  },
+  {
+    "id": 11,
+    "firstName": "Mayra",
+    "lastName": "Sillas",
+    "email": "mayrasillas97@gmail.com",
+    "city": "Monterrey",
+    "address": "Vista regia 110",
+    "codigo_postal": "64988",
+    "password": "$2a$10$saRIhe.Xlom2lBGtqF7RQ.VWg4pk1WVL49BqMT7MMqBqg0Eq2m6Zm",
+    "image": "group-1629163999679.png"
   }
 ]
