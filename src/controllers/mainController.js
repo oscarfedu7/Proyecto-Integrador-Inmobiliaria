@@ -17,7 +17,6 @@ const controller = {
         res.status(200).render("login");
     },
     logout: (req, res) => {
-        res.clearCookie('email');
         req.session.destroy();
         res.redirect("/");
     },
@@ -29,7 +28,7 @@ const controller = {
         });
     },
     register: (req, res) => {
-        
+        res.cookie('testing', 'Hola mundo puto',{maxAge:1000*30});
         res.status(200).render("register");
     },
     addUser: (req, res) => {
@@ -111,10 +110,6 @@ const controller = {
             if(isPassword){ 
                 delete userToLogin.password
                 req.session.userLogged = userToLogin;
-
-                if(req.body.remember){
-                    res.cookie('email', req.body.email, { maxAge: (1000 * 60) * 60})
-                } 
                 return res.redirect("/perfil");
             }
             return res.render('login', {

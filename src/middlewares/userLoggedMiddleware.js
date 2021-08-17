@@ -1,18 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-const userModels = require('../models/User');
 
 
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged =false;
-
-    let emailInCookie = req.cookies.email;
-    let userFromCookie = userModels.findByField('email', emailInCookie);
-
-    if(userFromCookie) {
-        req.session.userLogged = userFromCookie;
-    }
-    
     if(req.session && req.session.userLogged){
 
         let email = req.session.userLogged.email;
