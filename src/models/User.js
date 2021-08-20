@@ -60,15 +60,16 @@ const User = {
     } */
 
 }
-let ab = db.UsuarioPermitido.findOne({
-    include: ["permited_users"],
-    where:{
-        id_usuario: "2"
-    },   
-
-}).then((isPermited) => { 
-  return true;
+db.Product.findAll({
+    where: {
+        city: "Queretaro",
+        tipo: "Venta",
+        category: "Casa"               
+    }
 })
-console.log(ab + "holaaa");
+.then(function(products){
+    console.log(products[0]);
+})
+
 
 module.exports=User;

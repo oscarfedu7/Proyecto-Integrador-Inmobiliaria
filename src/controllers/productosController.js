@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const db = require("../database/models");
+const { Op } = require("sequelize");
 
 const controller = {
     carrito: (req, res) => {
@@ -29,6 +30,19 @@ const controller = {
     },
     productos: (req, res) => {
         db.Product.findAll()
+        .then(function(products){
+            res.status(200).render("productos/productos", {products}); //aquí van a ir los productos
+        })
+    },
+
+    productosFiltrados: (req, res) => {
+        db.Product.findAll({
+            where: {
+                city: req.body.city,
+                tipo: req.body.tipo,
+                category: req.body.category               
+            }
+        })
         .then(function(products){
             res.status(200).render("productos/productos", {products}); //aquí van a ir los productos
         })

@@ -21,7 +21,7 @@
     <%- include('../partials/header') %>
     <main  style="background-image: url('../img/casa2.jpg');">
 
-        <form action="" method="POST" class="formulario">
+        <form action="/productos/filtrados" method="POST" class="formulario">
 
             <div class="titulo">
                 <h1>Venta y renta de casas, departamentos y más</h1>
@@ -31,12 +31,12 @@
 
 
 
-                <select name="tipo-compra" id="tipo-compra">
+                <select name="tipo" id="tipo-compra">
                     <option value="Venta">Venta</option>
                     <option value="Renta">Renta</option>
                 </select>
 
-                <input type="text" multiple name="tipo-vivienda" id="tipo-vivienda" list="drawfemails" required size="64" placeholder="Tipo de vivienda">
+                <input type="text" multiple name="category" id="tipo-vivienda" list="drawfemails" required size="64" placeholder="Tipo de vivienda">
 
                 <datalist id="drawfemails">
                     <option value="Casa">Casa</option>
@@ -48,7 +48,7 @@
                 <br><br>
 
 
-                <input type="ciudad" multiple name="ciudad" id="ciudad" list="drawfemails2" required size="64" placeholder="Seleccione ciudad o palabra clave">
+                <input type="ciudad" multiple name="city" id="ciudad" list="drawfemails2" required size="64" placeholder="Seleccione ciudad o palabra clave">
                 <datalist id="drawfemails2">
                     <option value="CDMX">CDMX</option>
                     <option value="Guadalajara">Guadalajara</option>
@@ -88,7 +88,7 @@
                             <div class="precio">
                                 <div class="box-precio">
                                     <br><br>
-                                    <span class="spanV"><%= products[i].type %></span>
+                                    <span class="spanV"><%= products[i].tipo %></span>
                                     <span class="precio1"><strike><%="$"+ (products[i].price+1000*(i+1)) %></strike> </span>
                                 <span class="precio2"><b><%="$"+ products[i].price %></b></span>
                                 </div>
@@ -121,7 +121,7 @@
                             <div class="precio">
                                 <div class="box-precio">
                                     <br><br>
-                                    <span class="spanV"><%= products[i].type %></span>
+                                    <span class="spanV"><%= products[i].tipo %></span>
                                     <span class="precio1"><strike><%="$"+ (products[i].price+1000*(i+1)) %></strike> </span>
                                 <span class="precio2"><b><%="$"+ products[i].price %></b></span>
                                 </div>
