@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const usersFilePath = path.join(__dirname, "../database/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const {validationResult} = require('express-validator');
-const user = require('../models/User.js');
+//const user = require('../models/User.js');
 const { Console } = require("console");
 const bcryptjs = require('bcryptjs');
+
+const db = require("../database/models");
 
 
 const controller = {
@@ -28,11 +28,10 @@ const controller = {
         });
     },
     register: (req, res) => {
-        res.cookie('testing', 'Hola mundo puto',{maxAge:1000*30});
+        res.cookie('testing', 'Hola mundo',{maxAge:1000*30});
         res.status(200).render("register");
     },
     addUser: (req, res) => {
-        let userInDB = user.findByField('email', req.body.email);
         const resultValidation = validationResult(req);
 
 
@@ -43,24 +42,28 @@ const controller = {
                 oldData: req.body
             });
         }
-        console.log(userInDB);
 
         //si ya está registrado
-        if (userInDB) {
-            console.log(userInDB);
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya está registrado'
-                    }
-                },
-                oldData: req.body
-            });
-        }
+        db.User.findOne({
+            where:{
+                email: req.body.email 
+            }
+        }).then((userInDB) => {  
 
-        //crear al usuario
-        
-  //      let indice = users.length-1; 
+                if (userInDB) {
+                    console.log(userInDB);
+                    return res.render('register', {
+                        errors: {
+                            email: {
+                                msg: 'Este email ya está registrado'
+                            }
+                        },
+                        oldData: req.body
+                    });
+                }
+        });
+                
+        //crear al usuario          
         let imagen;
         if(req.file){
             console.log(req.file.filename);
@@ -76,60 +79,50 @@ const controller = {
             image: imagen,
         };
 
-   //     let usersInfo=req.body;
-    //    console.log(usersInfo);
-
-    /*    
-        if(req.file){
-            users.push({
-            ...usersInfo,
-                image:req.file.filename,
-                id: users[indice].id+1,
-            });
-        }else{
-            users.push({
-                ...usersInfo,
-                image:"avatar.jpg",
-                id: users[indice].id+1,
-            });
-        }
-        */
-       // users.push(usersInfo);
-        //fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        user.create(usersInfo);
+        db.User.create(
+            usersInfo
+        )
         res.redirect("/login");    
     },
     deleteUser: (req, res) => {
-        user.delete(req.body.id);
+        db.User.destroy({
+            where: {id: req.body.id}
+        });    
     },
 
     loginProcess: (req, res) =>{
-        let userToLogin = user.findByField('email', req.body.email);
-        if(userToLogin){
-            let isPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(isPassword){ 
-                delete userToLogin.password
-                req.session.userLogged = userToLogin;
-                return res.redirect("/perfil");
+        db.User.findOne({
+            where:{
+                email: req.body.email 
+            }
+        }).then((userToLogin) => { 
+            console.log(userToLogin);
+
+            if(userToLogin){
+                let isPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                if(isPassword){ 
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin;
+                    return res.redirect("/perfil");
+                }
+                return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Contaseña incorrecta'
+                        }
+                    },
+                    oldData: req.body
+                });
             }
             return res.render('login', {
                 errors: {
                     email: {
-                        msg: 'Contaseña incorrecta'
+                        msg: 'Este email no está registado'
                     }
                 },
                 oldData: req.body
             });
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Este email no está registado'
-                }
-            },
-            oldData: req.body
-        });
-
+        })
     }
 
 };
