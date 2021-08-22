@@ -21,13 +21,13 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 const validations=[
-    body('firstName').notEmpty().withMessage('Debes de escribir tu nombre'),
-    body('lastName').notEmpty().withMessage('Debes de escribir tu apellido'),
+    body('firstName').isLength({min:2}).notEmpty().withMessage('Debes de escribir tu nombre con almenos 2 caracteres'),
+    body('lastName').isLength({min:2}).notEmpty().withMessage('Debes de escribir tu apellido'),
     body('email').isEmail().notEmpty().withMessage('Debes de escribir tu email'),
     body('city').notEmpty().withMessage('Eige tu ciudad'),
     body('address').notEmpty().withMessage('Debes escribir tu dirección'),
     body('codigo_postal').notEmpty().withMessage('Debes escribir tu código postal'),
-    body('password').isLength({min:6}).notEmpty().withMessage('Debes de escribir una contraseña con al menos 6 carácteres'),
+    body('password').isStrongPassword().isLength({min:8}).notEmpty().withMessage('Debes de escribir una contraseña con al menos 8 carácteres'),
     body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];

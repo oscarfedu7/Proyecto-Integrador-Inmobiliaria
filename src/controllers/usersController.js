@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const {validationResult} = require('express-validator');
 
 const db = require("../database/models");
 
@@ -15,25 +16,36 @@ const controller = {
     },
     //Crea el producto
     create: (req, res) => {
-      //aaaaaaaaaaaaaaaaaaaaaaaaaaa
-        let imagen;
-        if(req.file){
-          imagen = req.file.filename;
+        //si hasy errores en la validación
+        const resultValidation = validationResult(req);
+
+        if(resultValidation.errors.length > 0){
+            res.status(200).render("users/crearProducto", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
         }
         else{
-          imagen = "no-image-found.png";
-        }
+        //aaaaaaaaaaaaaaaaaaaaaaaaaaa
+          let imagen;
+          if(req.file){
+            imagen = req.file.filename;
+          }
+          else{
+            imagen = "no-image-found.png";
+          }
 
-        let productsInfo = {
-            ...req.body,
-            image: imagen,
-            disponible: 1
-        };
-      //aaaaaaaaaaaaaaaaaaaaa
-        db.Product.create(
-          productsInfo
-        )
-        res.redirect("/productos/#cont-gen-prod");
+          let productsInfo = {
+              ...req.body,
+              image: imagen,
+              disponible: 1
+          };
+        //aaaaaaaaaaaaaaaaaaaaa
+          db.Product.create(
+            productsInfo
+          )
+          res.redirect("/productos/#cont-gen-prod");
+        }
     },
 
     edit: (req, res) => {

@@ -27,7 +27,7 @@
       value="<%=locals.oldData ? oldData.firstName : null %>">
       <%if(locals.errors && errors.firstName){%>
         <div class="text-danger">
-          <%= errors.firstName.msg%>
+          Debes de escribir tu nombre con almenos 2 caracteres
         </div>
       <%}%>
     </li>
@@ -37,7 +37,7 @@
       value="<%=locals.oldData ? oldData.lastName : null %>">
       <%if(locals.errors && errors.lastName){%>
           <div class="text-danger">
-            <%= errors.lastName.msg%>
+            Debes de escribir tu nombre con almenos 2 caracteres
           </div>
       <%}%>
     </li>
@@ -110,7 +110,7 @@
         <%if(locals.errors && errors.password){%>
           <div class="text-danger">
             <!--<%= errors.password.msg%>-->
-            Debes de escribir una contraseña con al menos 6 carácteres
+            Debes de escribir una contraseña con al menos 8 carácteres, mayusculas, números y simbolos
           </div>
         <%}%>
     </li>
