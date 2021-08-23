@@ -8,7 +8,7 @@ CREATE TABLE products(
   id int NOT NULL AUTO_INCREMENT, 
   city VARCHAR(500) not null,
   description VARCHAR(3000) not null,
-  price INT UNSIGNED NOT NULL,
+  price VARCHAR(20) NOT NULL,
   image VARCHAR(500) not null,
   category VARCHAR(500) not null,
   address VARCHAR(500) not null,

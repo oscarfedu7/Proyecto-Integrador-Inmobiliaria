@@ -122,7 +122,71 @@
                                 <div class="box-precio">
                                     <br><br>
                                     <span class="spanV"><%= products[i].tipo %></span>
-                                    <span class="precio1"><strike><%="$"+ (products[i].price+1000*(i+1)) %></strike> </span>
+                                    <span class="precio1"><strike><%="$"+ (products[i].price+10*(i+1)) %></strike> </span>
+                                <span class="precio2"><b><%="$"+ products[i].price %></b></span>
+                                </div>
+                                <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
+                                <span class="shoping"><i class="fas fa-cart-plus"></i></span>
+                            </div>
+                    </div>
+                <%}%>
+            <% }%>   
+        </div>
+    </div>
+
+    <div class="cont-gen-prod">
+        <h2>Terrenos</h2>
+        <div class="contenedor-products">
+
+            <% for(let i = 0; i < products.length; i ++) { %>
+                <% if(products[i].category.includes("Terreno")){ %>
+                    <div class="conte ">
+                            <div class="card">
+                                <img src="../img/<%=products[i].image%>" alt="">
+                            </div>
+                            <div class="informacion">
+                                <h1><%= products[i].city +", "+ products[i].address%> </h1>
+                                <p class="fecha">
+                                    <%= products[i].description %>
+                                </p>
+                            </div>
+                            <div class="precio">
+                                <div class="box-precio">
+                                    <br><br>
+                                    <span class="spanV"><%= products[i].tipo %></span>
+                                    <span class="precio1"><strike><%="$"+ (products[i].price+0) %></strike> </span>
+                                <span class="precio2"><b><%="$"+ products[i].price %></b></span>
+                                </div>
+                                <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
+                                <span class="shoping"><i class="fas fa-cart-plus"></i></span>
+                            </div>
+                    </div>
+                <%}%>
+            <% }%>   
+        </div>
+    </div>
+
+    <div class="cont-gen-prod">
+        <h2>Locales</h2>
+        <div class="contenedor-products">
+
+            <% for(let i = 0; i < products.length; i ++) { %>
+                <% if(products[i].category.includes("Local")){ %>
+                    <div class="conte ">
+                            <div class="card">
+                                <img src="../img/<%=products[i].image%>" alt="">
+                            </div>
+                            <div class="informacion">
+                                <h1><%= products[i].city +", "+ products[i].address%> </h1>
+                                <p class="fecha">
+                                    <%= products[i].description %>
+                                </p>
+                            </div>
+                            <div class="precio">
+                                <div class="box-precio">
+                                    <br><br>
+                                    <span class="spanV"><%= products[i].tipo %></span>
+                                    <span class="precio1"><strike><%="$"+ (products[i].price+0) %></strike> </span>
                                 <span class="precio2"><b><%="$"+ products[i].price %></b></span>
                                 </div>
                                 <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
