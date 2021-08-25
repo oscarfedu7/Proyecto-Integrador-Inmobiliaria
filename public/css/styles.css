@@ -1,3 +1,9 @@
+.fondo-index{
+    height: 79vh;
+    background: url('../img/casa2.jpg') rgba(0, 0, 0, 0.342);
+    background-size:cover;
+    background-blend-mode: multiply;
+}
 .foto-perfil{
     display: flex;
     align-items: center;
@@ -154,7 +160,7 @@ h1{
 
 footer{
     background: #f2f2f2;
-    padding: 4rem 0;
+  
     text-align:center ;
 
 
