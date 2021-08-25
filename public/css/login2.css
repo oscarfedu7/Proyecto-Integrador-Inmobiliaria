@@ -3,7 +3,7 @@ body {
 }
 form {border: 3px solid #f1f1f1; 
     color: white;
-    height: 82vh;
+    height: 100vh;
     background: url('../img/edificios.jpg') rgba(0, 0, 0, 0.342);
     background-size:cover;
     background-blend-mode: multiply;

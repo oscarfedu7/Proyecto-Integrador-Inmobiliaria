@@ -1,5 +1,5 @@
 .fondo-index{
-    height: 79vh;
+    height: 100vh;
     background: url('../img/casa2.jpg') rgba(0, 0, 0, 0.342);
     background-size:cover;
     background-blend-mode: multiply;
