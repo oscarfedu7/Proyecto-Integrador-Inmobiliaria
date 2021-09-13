@@ -52,7 +52,7 @@ router.get("/editarProducto", controller.editar);
 
 router.post("/crearProducto", upload.single('image'), validations, controller.create) ;
 
-router.get("/edit/:id",productsPermitedMiddleware, controller.edit);
+router.get("/editarProducto/:id",productsPermitedMiddleware, controller.edit);
 router.put("/:id",productsPermitedMiddleware, controller.update);
 router.delete('/:id', productsPermitedMiddleware, controller.destroy); 
 

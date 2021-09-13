@@ -14,6 +14,7 @@ const controller = {
         res.status(200).render("index");
     },
     login: (req, res) => {
+        
         res.status(200).render("login");
     },
     logout: (req, res) => {
@@ -21,6 +22,7 @@ const controller = {
         res.redirect("/");
     },
     perfil: (req, res) => {
+        console.log(req.cookies.userEmail);
         console.log("estas en login");
         console.log(req.session);
         res.status(200).render("perfil", {
@@ -28,7 +30,7 @@ const controller = {
         });
     },
     register: (req, res) => {
-        res.cookie('testing', 'Hola mundo',{maxAge:1000*30});
+       
         res.status(200).render("register");
     },
     addUser: (req, res) => {
@@ -96,6 +98,7 @@ const controller = {
                 email: req.body.email 
             }
         }).then((userToLogin) => { 
+           
             console.log(userToLogin);
 
             if(userToLogin){
@@ -103,6 +106,10 @@ const controller = {
                 if(isPassword){ 
                     delete userToLogin.password
                     req.session.userLogged = userToLogin;
+
+                //    if(req.body.remember) {
+                  //      res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2})
+                   // }
                     return res.redirect("/perfil");
                 }
                 return res.render('login', {

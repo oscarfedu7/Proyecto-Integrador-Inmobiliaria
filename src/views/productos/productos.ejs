@@ -19,55 +19,8 @@
 
 
     <%- include('../partials/header') %>
-    <main  style="background-image: url('../img/casa2.jpg');">
-
-        <form action="/productos/filtrados" method="POST" class="formulario">
-
-            <div class="titulo">
-                <h1>Venta y renta de casas, departamentos y más</h1>
-            </div>    
-
-            <div class="inputs">
-
-
-
-                <select name="tipo" id="tipo-compra">
-                    <option value="Venta">Venta</option>
-                    <option value="Renta">Renta</option>
-                </select>
-
-                <input type="text" multiple name="category" id="tipo-vivienda" list="drawfemails" required size="64" placeholder="Tipo de vivienda">
-
-                <datalist id="drawfemails">
-                    <option value="Casa">Casa</option>
-                    <option value="Departamento">Departamento</option>
-                    <option value="Local">Local</option>
-                    <option value="Terreno">Terreno</option>
-                    <option value="Oficina">Oficina</option>
-                </datalist>
-                <br><br>
-
-
-                <input type="ciudad" multiple name="city" id="ciudad" list="drawfemails2" required size="64" placeholder="Seleccione ciudad o palabra clave">
-                <datalist id="drawfemails2">
-                    <option value="CDMX">CDMX</option>
-                    <option value="Guadalajara">Guadalajara</option>
-                    <option value="Morelia">Morelia</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                    <option value="Leon">Leon</option>
-                    <option value="Monterrey">Monterrey</option>
-                    <option value="Ixtapa">Ixtapa</option>
-                    <option value="Queretaro">Queretaro</option>
-                </datalist>
-                <br><br><br>
-
-                <button type="submit" id="boton">Buscar</button>
-
-            </div>
-        </form>
-        <div class="borrar"></div>
-    </main>
-
+   
+    
     <div class="cont-gen-prod" id="cont-gen-prod">
         <h2>Casas</h2>
 
@@ -75,10 +28,13 @@
         <div class="contenedor-products">
             <% for(let i = 0; i < products.length; i ++) { %>
                 <% if(products[i].category.includes("Casa")){ %>
+                
                     <div class="conte ">
                             <div class="card">
                                 <img src="../img/<%=products[i].image%>" alt="">
                             </div>
+                   
+           
                             <div class="informacion">
                                 <h1><%= products[i].city +", "+ products[i].address%> </h1>
                                 <p class="fecha">
@@ -95,6 +51,7 @@
                                 <div class="button-detalle"><button class="button"><a href="../productos/<%= products[i].id %>">Ver detalle</a></button></div>
                                 <span class="shoping"><i class="fas fa-cart-plus"></i></span>
                             </div>
+           
                     </div>
                 <%}%>
             <% }%>     
@@ -198,12 +155,5 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p> paguina diseñada por oscar
-            </p>
-
-        </div>
-    </footer>
-
+    
 </body>

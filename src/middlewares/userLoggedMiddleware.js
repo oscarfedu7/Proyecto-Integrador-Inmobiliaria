@@ -1,10 +1,19 @@
 const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
+//const User = require('../models/User')
 
 
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged =false;
+
+  //  let emailInCookie = req.cookies.userEmail;
+    //let userFromCookie = User.findByField('email', emailInCookie);    
+
+   // if (userFromCookie) {
+     //   req.session.userLogged = userFromCookie;
+   // }
+
     if(req.session && req.session.userLogged){
 
         //let email = req.session.userLogged.email;
@@ -22,6 +31,7 @@ function userLoggedMiddleware(req, res, next){
             res.locals.firstName = req.session.userLogged.firstName;
             res.locals.lastName = req.session.userLogged.lastName;
             res.locals.isLogged = true;
+            res.locals.userLogged = req.session.userLogged;
             next();
         })
 
@@ -29,6 +39,8 @@ function userLoggedMiddleware(req, res, next){
     else{
         next();
     }
+
+
 }
 
 
