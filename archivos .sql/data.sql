@@ -103,7 +103,11 @@ VALUES ('Edna', 'Camacho Regalado', 'edna_love7@gmail.com', 'Guadalajara', '9 de
   '34534', '$2a$10$Zgrxt5dRYCgDGWjJJloOjeeOpJyRPMTUCxpHnNeMenBoqfym0w1DS','avatar.jpg');
 
 
+INSERT INTO vendedores(id_usuario,comision)
+VALUES ('1', '5'); 
 
+INSERT INTO usuariosPermitidos(id_usuario)
+VALUES ('1');
 
 
 
@@ -112,9 +116,5 @@ VALUES ('1', '1','2021/05/07', '1000000'); */
 
 
 
-INSERT INTO vendedores(id_usuario,comision)
-VALUES ('1', '5'); 
 
-INSERT INTO usuariosPermitidos(id_usuario)
-VALUES ('1');
 
