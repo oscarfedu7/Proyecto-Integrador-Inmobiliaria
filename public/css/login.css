@@ -72,7 +72,7 @@ img.avatar {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    float: right;
+    float: left;
 }
 
 span.psw {

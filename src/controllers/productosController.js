@@ -1,9 +1,8 @@
-
-
 const fs = require("fs");
 const path = require("path");
-const productsFilePath = path.join(__dirname, "../database/productsDataBase.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+const db = require("../database/models");
+const { Op } = require("sequelize");
 
 const controller = {
     carrito: (req, res) => {
@@ -12,22 +11,41 @@ const controller = {
     detalle: (req, res) => {
         let productId = req.params.id;
         console.log(productId);
-        const product = products.find((producto) => {
-          return producto.id == productId;
-        });
 
-        console.log(product);
-        if (product) {
-            res.status(200).render("productos/productDetail",{ product });
-        } else {
-            res.send("Error");
-            //res.render("error");
-        }
+        db.Product.findOne({
+            where:{
+                id: productId 
+            }
+        }).then((product) => {  
 
+            console.log(product);
+            if (product) {
+                res.status(200).render("productos/productDetail",{ product });
+            } else {
+                res.send("Error");
+                //res.render("error");
+            }
+        })
         
     },
     productos: (req, res) => {
-        res.status(200).render("productos/productos", {products}); //aquí van a ir los productos
+        db.Product.findAll()
+        .then(function(products){
+            res.status(200).render("productos/productos", {products}); //aquí van a ir los productos
+        })
+    },
+
+    productosFiltrados: (req, res) => {
+        db.Product.findAll({
+            where: {
+                city: req.body.city,
+                tipo: req.body.tipo,
+                category: req.body.category               
+            }
+        })
+        .then(function(products){
+            res.status(200).render("productos/productos", {products}); //aquí van a ir los productos
+        })
     }
 };
 

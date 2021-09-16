@@ -22,6 +22,20 @@ El sprint 2 fue mas sencillo ponernos de acuerdo y terminar todos los puntos ped
 Retrospectiva iniciado el sprint 4
 
 Creo que conforme vamos avanzando las tareas salen mas rapido y logramos comunicarnos mejor. (Mayra Sillas).
+Sprint-6
+Creo que tuvimos un poco de complicación con el tiempo, sin embargo se logró el objetivo. (Oscar Fernández).
+
+Retrospectiva Sprint 5
+En este sprint se tuvieron algunas complicaciones pues ya se tuvo que tener una mejor estabilidad con la parte del backend, 
+por lo que se descuidó un poco la parte del front end, sin embargo se planea más adelante mejorar este punto.
+Algo muy bueno que se implementó fue que nada más usuarios permitidos podrán hacer CRUD en nuestro proyecto. (Oscar Fernández)
+
+
+Retrospectiva Sprint 6
+Aunque hubo puntos del sprint que no funcionaron a la primera, como la conexión de la base de datos, todo llegó a funcionar muy bien, se crearon correctamente los archivos .sql y la estabilidad del back end parece ser buena. También se arreglaron cosas del front end. (Oscar Fernández) 
+
+
+
 de complicación con el tiempo, sin embargo se logró el objetivo. (Oscar Fernández).
 
 Retrospectiva Sprint 5 
@@ -29,3 +43,4 @@ En este sprint se tuvieron algunas complicaciones pues ya se tuvo que tener una 
 
 Retrospectiva Sprint 6
 Aunque hubo puntos del sprint que no funcionaron a la primera, como la conexión de la base de datos, todo llegó a funcionar muy bien, se crearon correctamente los archivos .sql y la estabilidad del back end parece ser buena. También se arreglaron cosas del front end. (Oscar Fernández)
+ main
