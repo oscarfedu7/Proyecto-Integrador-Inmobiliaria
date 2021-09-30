@@ -1,11 +1,12 @@
-body {
-    background-image: url("./img/register.jpg");
-}
+
 
 .text-danger{
   color: rgb(175, 0, 0);
 }
-
+.validations-frontend{
+  display: flex;
+  justify-content: center;
+}
 form {
     margin: 0 auto;
     width: 40vw;

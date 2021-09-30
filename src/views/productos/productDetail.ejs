@@ -10,10 +10,10 @@
     <link href="../css/productDetail.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </head>
 <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/header2') %>
     <div class="detalleTitulo">
         <h2 id="titulo-det">Detalle de Producto </h2>
     </div>
@@ -41,9 +41,9 @@
             <div id="precio">
                 <h4><%="Precio: $"+ product.price%></h4>
                 <% if(locals.isLogged && locals.isPermited){ %>
-                    <button id="boton-edit"><a href="/users/editarProducto/<%=product.id%>" class="action-button edit"><img src="../img/edit.svg" width="15"></a> Editar</button>
+                    <a href="/users/editarProducto/<%=product.id%>" class="action-button edit"><button id="boton-edit"><img src="../img/edit.svg" width="15">Editar </button></a>
                     <form action="/users/<%=product.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                        <button id="boton-edit" type="submit" class="action-button delete"><img src="../img/delete.svg" width="15"> Eliminar</button>
+                    <button id="boton-delete" type="submit" class="action-button delete"><img src="../img/delete.svg" width="15"> Eliminar</button>
                     </form>
                 <%}%>
             </div>
