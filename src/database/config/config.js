@@ -1,4 +1,7 @@
 module.exports = {
+  "development": {
+    "username": "oscar",
+    "password": "root",
     "development": {
     "username": "root",
     "password": "mj*Cp-YwV9!d%BY",
@@ -7,8 +10,8 @@ module.exports = {
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "mj*Cp-YwV9!d%BY",
+    "username": "oscar",
+    "password": "root",
     "database": "bits",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -21,3 +24,4 @@ module.exports = {
     "dialect": "mysql"
   }
 }
+

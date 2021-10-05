@@ -401,7 +401,10 @@ body{
     margin: 4px 2px;
     cursor: pointer;
   }
+  .button:hover{
+    background-color: #45a049;
 
+}
   .borra{
       margin:0;
       height: 100%;

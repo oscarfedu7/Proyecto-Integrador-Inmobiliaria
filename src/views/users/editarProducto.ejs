@@ -10,11 +10,11 @@
     <link href="../css/register2.css" rel="stylesheet" type="text/css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </head>
 <body>
 
-<%- include('../partials/header') %>
+<%- include('../partials/header2') %>
 <div class="fondo-registro" style="background-image: url('../img/register.jpg');">
     <h1>Editar Producto</h1>
    <form action="/users/<%= productToEdit.id %>?_method=PUT" method="post">
