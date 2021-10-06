@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {border: 3px solid #f1f1f1; 
+    color: white;
+}
+.text-danger{
+  color: rgb(160, 0, 0);
+  font-size: 18px;
+}
+
+input[type=email], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+  
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: 120px;
+  padding: 10px 18px;
+  background-color: #65ceff;
+  margin-left: 60%;
+}
+
+.label{
+    margin-left: 25%;
+    font-size: 24px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+  }
+
+.acomodo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: left;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  padding-right: 128px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 767px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+
+
+
+  input[type=text], input[type=password] {
+      width: 100%;
+ }
+ .label{
+    margin-left: 1%;
+}
+}

@@ -1,0 +1,99 @@
+
+
+.text-danger{
+  color: rgb(175, 0, 0);
+}
+.validations-frontend{
+  display: flex;
+  justify-content: center;
+}
+form {
+    margin: 0 auto;
+    width: 40vw;
+    padding: 10%;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  
+  input,
+  textarea {
+    font: 1em sans-serif;
+    width: 50vw;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #000;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  .button-register {
+    padding-left: 90px; 
+  }
+
+  input{
+    border-radius: 5px;
+    height: 35px;
+  }
+  .fill{
+    border: 2px solid rgba(209, 0, 0, 0.87);
+  }
+
+  
+  button {
+    margin-left: .1em;
+    height: 40px;
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 1em;
+    border: none;
+  }
+
+  button:hover{
+    background-color: rgba(0, 0, 0, 0.431);
+  }
+
+  .fondo-registro {
+      padding: 10vh;
+      position: static;
+      background-repeat: no-repeat;
+  }
+
+  h1 {
+      font-size: 50px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: #000;
+  }
