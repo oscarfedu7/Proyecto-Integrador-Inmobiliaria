@@ -14,7 +14,6 @@ const cookies = require("cookie-parser");
 const rutaMain = require("./routes/main");
 const rutaProductos = require("./routes/productos");
 const rutaUsers = require("./routes/users");
-const rutaApi = require("./routes/api");
 const PORT = process.env.PORT || 3100;
 //const rutaUsers = require("./routes/users");
 
@@ -40,8 +39,6 @@ app.use(userLoggedMiddleware);
 app.use("/", rutaMain);
 app.use("/productos", rutaProductos);
 app.use("/users", rutaUsers);
-app.use("/api", rutaApi);
-
 
 
 app.listen(PORT, () => {

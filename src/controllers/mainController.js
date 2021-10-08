@@ -23,6 +23,8 @@ const controller = {
     },
     perfil: (req, res) => {
         console.log(req.cookies.userEmail);
+        console.log("estas en login");
+        console.log(req.session);
         res.status(200).render("perfil", {
             user: req.session.userLogged
         });
