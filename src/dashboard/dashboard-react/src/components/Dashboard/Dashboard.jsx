@@ -3,6 +3,7 @@ import React from 'react';
 import "./Dashboard.css";
 import Sidebar from '../Sidebar/Sidebar';
 import Card from '../Card/Card';
+import Table from '../Table/Table';
 
 function Dashboard() {
   return (
@@ -32,6 +33,10 @@ function Dashboard() {
                         <Card/>
                         <Card/>              
                         <Card/>
+                    </div>
+                    <br/>
+                    <div>
+                        <Table/>
                     </div>
 
 
