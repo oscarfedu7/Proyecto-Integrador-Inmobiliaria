@@ -8,6 +8,7 @@ const morgan = require("morgan");
 const session = require("express-session");
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require("cookie-parser");
+const cors = require('cors');
 
 
 //Rutas
@@ -21,7 +22,7 @@ const PORT = process.env.PORT || 3100;
 app.set('views', __dirname + '/views');
 app.set("view engine", "ejs");
 
-
+app.use(cors());
 app.use(morgan('dev'));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "../public")));
@@ -41,7 +42,6 @@ app.use("/", rutaMain);
 app.use("/productos", rutaProductos);
 app.use("/users", rutaUsers);
 app.use("/api", rutaApi);
-
 
 
 app.listen(PORT, () => {

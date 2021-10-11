@@ -1,43 +1,60 @@
 import React, {Component} from 'react';
+import Users from '../Users/Users';
 
 class Table extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      users: [],
+      usersTam: "" 
+    };
+  }
+  apiCall(url, consecuencia){
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+            console.log(data);
+            this.setState(
+              {
+                users: data.users,
+                usersTam: data.cont
+              } 
+            )
+      })
+      .catch(error => console.log(error));
+  }
+
+  componentDidMount(){
+    console.log("Me monté");
+    this.apiCall("http://localhost:3100/api/users", this.mostrarUsers)
+  }
+
+  componentDidUpdate(){
+    console.log("Me actualicé");
+  }
   render(){
+    console.log("Estoy renderizando");
     return (
       <div className="container mt-3">
+
+
+
     <h2>Filterable Table</h2>
     <p>Type something in the input field to search the table for first names, last names or emails:</p>  
     <input className="form-control" id="myInput" type="text" placeholder="Search.."/>
     <br/>
-    <table class="table table-dark">
+    <table className="table table-dark">
       <thead>
         <tr>
+          <th>Id</th>
+          <th>Image</th>
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Email</th>
+          <th>City</th>
         </tr>
       </thead>
-      <tbody id="myTable">
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@mail.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@greatstuff.com</td>
-        </tr>
-        <tr>
-          <td>Anja</td>
-          <td>Ravendale</td>
-          <td>a_r@test.com</td>
-        </tr>
-      </tbody>
+      <Users users={this.state.users} />
     </table>
     
     <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>

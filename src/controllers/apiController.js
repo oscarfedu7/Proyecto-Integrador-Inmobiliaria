@@ -10,11 +10,24 @@ const controller = {
     getAllUsers: async (req, res) => {
         try {
             let users = await Users.findAll({
-                attributes: ['id', 'firstName', 'lastName', 'email'],
+                attributes: ['id', 'firstName', 'lastName', 'email', 'city', 'address', 'codigo_postal', 'image'],
                 raw: true
             });
 
-            users.map(user => user.detail = `/dashboard/users/${user.id}`);
+            users = users.map(user => {
+                return Object.assign({}, {
+                    id: user.id,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                    city: user.city,
+                    address: user.address,
+                    codigo_postal: user.codigo_postal,
+                    image: "https://grupo8-bits.herokuapp.com/img/users/"+user.image,
+                    detail: `/dashboard/users/${user.id}`
+                })
+            })
+
 
             const apiResponse = Object.assign(
                 {},
@@ -41,7 +54,7 @@ const controller = {
                     email: user.email,
                     city: user.city,
                     address: user.address,
-                    url: "https://grupo8-bits.herokuapp.com/img/users/"+user.image
+                    image: "https://grupo8-bits.herokuapp.com/img/users/"+user.image
                 }
             );
             return res.status(200).json(apiResponse);

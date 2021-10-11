@@ -16,7 +16,7 @@ function Dashboard() {
         <Sidebar/>
 
 
-        <div id="content-wrapper" classNameName="d-flex flex-column">
+        <div id="content-wrapper" className="d-flex flex-column">
 
             <div id="content">
 
