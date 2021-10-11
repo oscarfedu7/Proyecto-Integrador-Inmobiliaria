@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Dashboard from './components/Dashboard/DashboardUsers';
+import DashboardUsers from './components/Dashboard/DashboardUsers';
+import DashboardUserDetail from './components/Dashboard/DashboardUserDetail';
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
@@ -10,7 +12,8 @@ function App() {
 
       </header>
       <main>
-        <Dashboard />
+        <Route exact path="/" component={DashboardUsers}/>
+        <Route path="/dashboard/users/:id" component={DashboardUserDetail}/>
 
       </main>
     </div>
