@@ -39,7 +39,7 @@ class Table extends Component{
 
 
 
-    <h2>Filterable Table</h2>
+    <h2>Usuarios</h2>
     <p>Type something in the input field to search the table for first names, last names or emails:</p>  
     <input className="form-control" id="myInput" type="text" placeholder="Search.."/>
     <br/>
@@ -52,12 +52,14 @@ class Table extends Component{
           <th>Lastname</th>
           <th>Email</th>
           <th>City</th>
+          <th>Address</th>
+          <th>Código-postal</th>
         </tr>
       </thead>
       <Users users={this.state.users} />
     </table>
     
-    <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+  
       </div>   
     ) 
   }

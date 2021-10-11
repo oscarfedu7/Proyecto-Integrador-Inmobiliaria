@@ -13,7 +13,7 @@ function Sidebar() {
             <div className="sidebar-brand-icon rotate-n-15">
                 <i className="fas fa-laugh-wink"></i>
             </div>
-            <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div className="sidebar-brand-text mx-3">Dashboard Bits</div>
         </a>
 
         <hr className="sidebar-divider my-0"/>
@@ -29,14 +29,14 @@ function Sidebar() {
 
 
         <div className="sidebar-heading">
-            Interface
+            Tablas
         </div>
 
         <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
                 <i className="fas fa-fw fa-cog"></i>
-                <span>Components</span>
+                <span>Users</span>
             </a>
             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div className="bg-white py-2 collapse-inner rounded">
@@ -52,7 +52,7 @@ function Sidebar() {
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
                 <i className="fas fa-fw fa-wrench"></i>
-                <span>Utilities</span>
+                <span>Products</span>
             </a>
             <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
@@ -70,7 +70,7 @@ function Sidebar() {
 
 
         <div className="sidebar-heading">
-            Addons
+            Adds
         </div>
 
   
@@ -92,20 +92,6 @@ function Sidebar() {
                     <a className="collapse-item" href="blank.html">Blank Page</a>
                 </div>
             </div>
-        </li>
-
-
-        <li className="nav-item">
-            <a className="nav-link" href="charts.html">
-                <i className="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span></a>
-        </li>
-
-
-        <li className="nav-item">
-            <a className="nav-link" href="tables.html">
-                <i className="fas fa-fw fa-table"></i>
-                <span>Tables</span></a>
         </li>
 
 

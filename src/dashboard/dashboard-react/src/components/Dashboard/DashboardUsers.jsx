@@ -1,11 +1,58 @@
 
-import React from 'react';
+import React,{Component} from 'react';
 import "./Dashboard.css";
 import Sidebar from '../Sidebar/Sidebar';
 import Card from '../Card/Card';
-import Table from '../Table/Table';
+import TableUser from '../Table/TableUsers';
 
-function Dashboard() {
+
+
+
+class Dashboard extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+          usersTam: "",
+          productsTam:"" 
+        };
+    }
+
+    apiCallUsers(url){
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+                this.setState(
+                  {
+                    usersTam: data.count
+                  } 
+                )
+          })
+          .catch(error => console.log(error));
+      }
+    apiCallProducts(url){
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+                this.setState(
+                  {
+                    productsTam: data.count
+                  } 
+                )
+          })
+          .catch(error => console.log(error));
+      }
+
+      componentDidMount(){
+        console.log("Me monté");
+        this.apiCallUsers("http://localhost:3100/api/users")
+        this.apiCallProducts("http://localhost:3100/api/products")
+      }
+    
+      componentDidUpdate(){
+        console.log("Me actualicé");
+      }
+
+  render(){
   return (
 
 
@@ -30,13 +77,11 @@ function Dashboard() {
                     </div>
 
                     <div className="row">   
-                        <Card/>
-                        <Card/>              
-                        <Card/>
+                        <Card color="primary" tam={this.state.usersTam} type="Cantidad de usuarios"/>
                     </div>
                     <br/>
                     <div>
-                        <Table/>
+                        <TableUser/>
                     </div>
 
 
@@ -50,7 +95,7 @@ function Dashboard() {
             <footer className="sticky-footer bg-white">
                 <div className="container my-auto">
                     <div className="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Bits &copy; Inmobiliaria Website 2021</span>
                     </div>
                 </div>
             </footer>
@@ -103,6 +148,7 @@ function Dashboard() {
 </div>
 
 );
+}
 }
 
 export default Dashboard;

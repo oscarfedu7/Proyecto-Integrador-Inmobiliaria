@@ -9,6 +9,8 @@ function Users({ users }) {
           <td>{user.lastName}</td>
           <td>{user.email}</td>
           <td>{user.city}</td>
+          <td>{user.address}</td>
+          <td>{user.codigo_postal}</td>
         </tr>
         ))}
           </tbody>
