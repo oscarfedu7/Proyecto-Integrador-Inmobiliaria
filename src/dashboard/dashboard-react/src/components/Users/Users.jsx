@@ -11,6 +11,7 @@ function Users({ users }) {
           <td>{user.city}</td>
           <td>{user.address}</td>
           <td>{user.codigo_postal}</td>
+          <td><a href={user.detail}><button>Detalle</button></a></td>
         </tr>
         ))}
           </tbody>

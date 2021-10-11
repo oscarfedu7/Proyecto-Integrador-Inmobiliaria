@@ -35,35 +35,20 @@ function Sidebar() {
         <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i className="fas fa-fw fa-cog"></i>
+                <i className="fas fa-fw fa-cog"> <img className="sidebar-card-illustration mb-2" src="/img/user.svg" alt="..." /> </i>
                 <span>Users</span>
             </a>
-            <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div className="bg-white py-2 collapse-inner rounded">
-                    <h6 className="collapse-header">Custom Components:</h6>
-                    <a className="collapse-item" href="buttons.html">Buttons</a>
-                    <a className="collapse-item" href="cards.html">Cards</a>
-                </div>
-            </div>
+
         </li>
 
 
         <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
-                <i className="fas fa-fw fa-wrench"></i>
+                <i className="fas fa-fw fa-wrench"><img className="sidebar-card-illustration mb-2" src="/img/products.svg" alt="..."/></i>
                 <span>Products</span>
             </a>
-            <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities"
-                data-parent="#accordionSidebar">
-                <div className="bg-white py-2 collapse-inner rounded">
-                    <h6 className="collapse-header">Custom Utilities:</h6>
-                    <a className="collapse-item" href="utilities-color.html">Colors</a>
-                    <a className="collapse-item" href="utilities-border.html">Borders</a>
-                    <a className="collapse-item" href="utilities-animation.html">Animations</a>
-                    <a className="collapse-item" href="utilities-other.html">Other</a>
-                </div>
-            </div>
+
         </li>
 
         <hr className="sidebar-divider"/>
@@ -77,7 +62,7 @@ function Sidebar() {
         <li className="nav-item">
             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                 aria-expanded="true" aria-controls="collapsePages">
-                <i className="fas fa-fw fa-folder"></i>
+                <i className="fas fa-fw fa-folder"><img className="sidebar-card-illustration mb-2" src="/img/add.svg" alt="..."/></i>
                 <span>Pages</span>
             </a>
             <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -98,15 +83,12 @@ function Sidebar() {
         <hr className="sidebar-divider d-none d-md-block"/>
 
 
-        <div className="text-center d-none d-md-inline">
-            <button className="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
 
 
         <div className="sidebar-card d-none d-lg-flex">
-            <img className="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..."/>
-            <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-            <a className="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            <img className="sidebar-card-illustration mb-2" src="/img/undraw_rocket.svg" alt="..."/>
+            <p className="text-center mb-2"><strong>bits Admin Pro</strong> Conoce un poco más de la página de bits!</p>
+            <a className="btn btn-success btn-sm" href="http://localhost:3100/">Ir a Bits!</a>
         </div>
 
     </ul>

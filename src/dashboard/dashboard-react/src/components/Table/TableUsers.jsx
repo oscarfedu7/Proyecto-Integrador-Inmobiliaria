@@ -54,6 +54,7 @@ class Table extends Component{
           <th>City</th>
           <th>Address</th>
           <th>Código-postal</th>
+          <th>Detalle:</th>
         </tr>
       </thead>
       <Users users={this.state.users} />
