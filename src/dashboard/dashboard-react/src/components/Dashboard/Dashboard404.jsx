@@ -2,44 +2,9 @@
 import React,{Component} from 'react';
 import "./Dashboard.css";
 import Sidebar from '../Sidebar/Sidebar';
-import UserDetail from '../Users/UserDetail';
 
 
-
-
-
-class Dashboard extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-          user: ""
-        };
-    }
-
-    apiCallUsers(url){
-        fetch(url)
-          .then(res => res.json())
-          .then(data => {
-                this.setState(
-                  {
-                    usersTam: data.count
-                  } 
-                )
-          })
-          .catch(error => console.log(error));
-      }
-
-
-      componentDidMount(){
-        console.log("Me monté");
-        this.apiCallUsers("http://localhost:3100/api/users")
-      }
-    
-      componentDidUpdate(){
-        console.log("Me actualicé");
-      }
-
-  render(){
+function Dashboard404(){
   return (
 
 
@@ -55,18 +20,14 @@ class Dashboard extends Component{
             <div id="content">
 
 
-                <div className="container-fluid">
+            <div class="container-fluid">
 
-                    <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                className="fas fa-download fa-sm text-white-50"></i> Generar reporte</a>
-                    </div>
-                    
-                    <div>
-                        <UserDetail/>
-                    </div>
-
+                <div class="text-center">
+                    <div class="error mx-auto" data-text="404">404</div>
+                    <p class="lead text-gray-800 mb-5">Page Not Found</p>
+                    <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+                    <a href="index.html">&larr; Back to Dashboard</a>
+                </div>
 
                 </div>
 
@@ -132,6 +93,6 @@ class Dashboard extends Component{
 
 );
 }
-}
 
-export default Dashboard;
+
+export default Dashboard404;
