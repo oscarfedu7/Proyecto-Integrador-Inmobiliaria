@@ -5,14 +5,17 @@ import Sidebar from '../Sidebar/Sidebar';
 import UserDetail from '../Users/UserDetail';
 
 
-
-
-
 class Dashboard extends Component{
     constructor(props){
         super(props);
         this.state={
-          user: ""
+          id: props.match.params.id,
+          firstName:"",
+          lastName: "",
+          email: "",
+          city: "",
+          address: "",
+          image: ""
         };
     }
 
@@ -22,7 +25,13 @@ class Dashboard extends Component{
           .then(data => {
                 this.setState(
                   {
-                    usersTam: data.count
+                    firstName:data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    city: data.city,
+                    address: data.address,
+                    image: data.image,
+                    codigo_postal: data.codigo_postal
                   } 
                 )
           })
@@ -32,7 +41,7 @@ class Dashboard extends Component{
 
       componentDidMount(){
         console.log("Me monté");
-        this.apiCallUsers("http://localhost:3100/api/users")
+        this.apiCallUsers("http://localhost:3100/api/users/"+this.state.id);
       }
     
       componentDidUpdate(){
@@ -64,7 +73,10 @@ class Dashboard extends Component{
                     </div>
                     
                     <div>
-                        <UserDetail/>
+                        <UserDetail firstName={this.state.firstName} lastName={this.state.lastName}
+                        email={this.state.email} address={this.state.address}
+                        image={this.state.image} city={this.state.city} 
+                        codigo_postal={this.state.codigo_postal}/>
                     </div>
 
 

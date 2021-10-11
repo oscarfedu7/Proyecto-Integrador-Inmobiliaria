@@ -33,7 +33,7 @@ function Sidebar() {
         </div>
 
         <li className="nav-item">
-            <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            <a className="nav-link collapsed" href="/" 
                 aria-expanded="true" aria-controls="collapseTwo">
                 <i className="fas fa-fw fa-cog"> <img className="sidebar-card-illustration mb-2" src="/img/user.svg" alt="..." /> </i>
                 <span>Users</span>

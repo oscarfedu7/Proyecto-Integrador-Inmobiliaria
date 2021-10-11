@@ -54,6 +54,7 @@ const controller = {
                     email: user.email,
                     city: user.city,
                     address: user.address,
+                    codigo_postal: user.codigo_postal,
                     image: "https://grupo8-bits.herokuapp.com/img/users/"+user.image
                 }
             );

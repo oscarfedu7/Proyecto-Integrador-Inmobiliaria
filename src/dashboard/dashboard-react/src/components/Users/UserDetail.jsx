@@ -4,7 +4,7 @@ import "./UserDetail.css";
 
  
 
-function UserDetail(){
+function UserDetail(props){
   return (
     <div>
         <div className="detalleTitulo">
@@ -16,25 +16,25 @@ function UserDetail(){
         <div id="general">
             <div id="part1">
                 <div id="imagen-casa">
-                    <img src="/img/products.svg" width="200px" height="200px" alt=""/>
+                    <img src={props.image} width="200px" height="300px" alt=""/>
                 </div>
             </div>
             <div id="part2">
  
                 <div id="amplia-descr">
-                    <h3>Nombre: Oscar Fernández Durán</h3>
+                    <h3>Nombre: {props.firstName+" "+props.lastName}</h3>
                 </div>
                 <div id="amplia-descr">
-                    <h3>Ciudad: Morelia</h3>
+                    <h3>Email: {props.email}</h3>
                 </div>
                 <div id="amplia-descr">
-                    <h3>Dirección: calle aguas calientes #234</h3>
+                    <h3>Ciudad: {props.city}</h3>
                 </div>
                 <div id="amplia-descr">
-                    <h3>Código postal: 58240</h3>
+                    <h3>Dirección: {props.address}</h3>
                 </div>
-                <div id="precio">
-                    <h4>no sé que más</h4>
+                <div id="amplia-descr">
+                    <h3>Código postal: {props.codigo_postal}</h3>
                 </div>
             </div>
 
