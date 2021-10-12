@@ -35,9 +35,9 @@ window.addEventListener('load', function(){
             errores.price = 'Debe de escribir el precio y debe ser un número entero';
         }
         let fileExtension = getFileExtension(image.value);
-        if (!acceptedExtensions.includes(fileExtension) && image.value.length>0) {
-            errores.image = 'Debes poner una imagen válida con extensiones permitidas: .jpg .png .gif .jpeg';
-        }
+     //   if (image.value.length<0 || !acceptedExtensions.includes(fileExtension)) {
+     //       errores.image = 'Debes poner una imagen válida con extensiones permitidas: .jpg .png .gif .jpeg';
+     //   }
 
        // let b=false;
       //  estados.forEach(element => {
