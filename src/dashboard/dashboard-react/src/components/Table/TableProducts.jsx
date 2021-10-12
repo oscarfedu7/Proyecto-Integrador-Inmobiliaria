@@ -25,7 +25,7 @@ class Table extends Component{
 
   componentDidMount(){
     console.log("Me monté");
-    this.apiCall("http://localhost:3100/api/products")
+    this.apiCall("https://grupo8-bits.herokuapp.com/api/products")
   }
 
   componentDidUpdate(){

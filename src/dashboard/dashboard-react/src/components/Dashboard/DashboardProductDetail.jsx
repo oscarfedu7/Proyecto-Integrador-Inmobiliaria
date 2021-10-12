@@ -41,7 +41,7 @@ class Dashboard extends Component{
 
       componentDidMount(){
         console.log("Me monté");
-        this.apiCallProducts("http://localhost:3100/api/products/"+this.state.id);
+        this.apiCallProducts("https://grupo8-bits.herokuapp.com/api/products/"+this.state.id);
       }
     
       componentDidUpdate(){

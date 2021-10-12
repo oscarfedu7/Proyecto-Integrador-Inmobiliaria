@@ -26,7 +26,7 @@ class Table extends Component{
 
   componentDidMount(){
     console.log("Me monté");
-    this.apiCall("http://localhost:3100/api/users", this.mostrarUsers)
+    this.apiCall("https://grupo8-bits.herokuapp.com/api/users", this.mostrarUsers)
   }
 
   componentDidUpdate(){
