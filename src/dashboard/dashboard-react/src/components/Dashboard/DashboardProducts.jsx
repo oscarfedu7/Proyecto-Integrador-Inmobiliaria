@@ -30,7 +30,7 @@ class Dashboard extends Component{
 
       componentDidMount(){
         console.log("Me monté");
-        this.apiCallProducts("http://localhost:3100/api/products")
+        this.apiCallProducts("https://grupo8-bits.herokuapp.com/api/products")
       }
     
       componentDidUpdate(){
