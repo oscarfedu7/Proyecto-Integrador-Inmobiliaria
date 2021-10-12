@@ -16,7 +16,7 @@ const rutaMain = require("./routes/main");
 const rutaProductos = require("./routes/productos");
 const rutaUsers = require("./routes/users");
 const rutaApi = require("./routes/api");
-const PORT = process.env.PORT || 3100;
+const PORT = process.env.PORT || 3200;
 //const rutaUsers = require("./routes/users");
 
 app.set('views', __dirname + '/views');

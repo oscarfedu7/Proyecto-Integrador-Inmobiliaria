@@ -43,7 +43,7 @@ window.addEventListener('load', function(){
             errores.address = 'Debes escribir tu dirección';
         }
         
-        if(codigo_postal.value.length != 5 || !Number.isInteger(codigo_postal.value)){
+        if(codigo_postal.value.length != 5){
             errores.codigo_postal = 'Debes escribir un código postal válido (5 números)';
         }
         if(pass.value.length < 1){
