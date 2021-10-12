@@ -19,7 +19,7 @@ function Sidebar() {
         <hr className="sidebar-divider my-0"/>
 
         <li className="nav-item active">
-            <a className="nav-link" href="index.html">
+            <a className="nav-link" href="/">
                 <i className="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -33,7 +33,7 @@ function Sidebar() {
         </div>
 
         <li className="nav-item">
-            <a className="nav-link collapsed" href="/" 
+            <a className="nav-link collapsed" href="/users" 
                 aria-expanded="true" aria-controls="collapseTwo">
                 <i className="fas fa-fw fa-cog"> <img className="sidebar-card-illustration mb-2" src="/img/user.svg" alt="..." /> </i>
                 <span>Users</span>

@@ -6,6 +6,7 @@ import DashboardProducts from './components/Dashboard/DashboardProducts';
 import DashboardUserDetail from './components/Dashboard/DashboardUserDetail';
 import DashboardProductDetail from './components/Dashboard/DashboardProductDetail';
 import Dashboard404 from './components/Dashboard/Dashboard404';
+import DashboardInicio from './components/Dashboard/DashboardInicio';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       </header>
       <main>
         <Switch>
-          <Route exact path="/" component={DashboardUsers}/>
+          <Route exact path="/users" component={DashboardUsers}/>
+          <Route exact path="/" component={DashboardInicio}/>
           <Route exact path="/products" component={DashboardProducts}/>
           <Route path="/dashboard/users/:id" component={DashboardUserDetail}/>
           <Route path="/dashboard/products/:id" component={DashboardProductDetail}/>
