@@ -45,6 +45,7 @@ const controller = {
         }
 
         //si ya está registrado
+
         db.User.findOne({
             where:{
                 email: req.body.email 
@@ -53,7 +54,7 @@ const controller = {
 
                 if (userInDB) {
                     console.log(userInDB);
-                    return res.render('register', {
+                    return res.status(200).render("register", {
                         errors: {
                             email: {
                                 msg: 'Este email ya está registrado'
@@ -62,30 +63,36 @@ const controller = {
                         oldData: req.body
                     });
                 }
-        }).then((a)=>{
-    
-            //crear al usuario          
-            let imagen;
-            if(req.file){
-                console.log(req.file.filename);
-                imagen = req.file.filename;
-            }
-            else{
-                imagen = "avatar.jpg";
-            }
-
-            let usersInfo = {
-                ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                image: imagen,
-            };
-
-            db.User.create(
-                usersInfo
-            )
-            res.redirect("/login"); 
-        });             
-         
+                        //si hasy errores en la validación
+                else if(resultValidation.errors.length > 0){
+                    res.status(200).render("register", {
+                        errors: resultValidation.mapped(),
+                        oldData: req.body
+                    });
+                }
+                else{
+                        //crear al usuario          
+                        let imagen;
+                        if(req.file){
+                            console.log(req.file.filename);
+                            imagen = req.file.filename;
+                        }
+                        else{
+                            imagen = "avatar.jpg";
+                        }
+            
+                        let usersInfo = {
+                            ...req.body,
+                            password: bcryptjs.hashSync(req.body.password, 10),
+                            image: imagen,
+                        };
+            
+                        db.User.create(
+                            usersInfo
+                        )
+                        res.redirect("/login"); 
+                }
+        })
     },
     deleteUser: (req, res) => {
         db.User.destroy({
