@@ -63,28 +63,30 @@ const controller = {
                         oldData: req.body
                     });
                 }
+        }).then((a)=>{
+    
+            //crear al usuario          
+            let imagen;
+            if(req.file){
+                console.log(req.file.filename);
+                imagen = req.file.filename;
+            }
+            else{
+                imagen = "avatar.jpg";
+            }
+
+            let usersInfo = {
+                ...req.body,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                image: imagen,
+            };
+
+            db.User.create(
+                usersInfo
+            )
+            res.redirect("/login"); 
         });
-                
-        //crear al usuario          
-        let imagen;
-        if(req.file){
-            console.log(req.file.filename);
-            imagen = req.file.filename;
-        }
-        else{
-            imagen = "avatar.jpg";
-        }
-
-        let usersInfo = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: imagen,
-        };
-
-        db.User.create(
-            usersInfo
-        )
-        res.redirect("/login");    
+            
     },
     deleteUser: (req, res) => {
         db.User.destroy({
