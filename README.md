@@ -12,7 +12,7 @@ El primer link es del ecommerce, y el segundo link es de un dashboard hecho 100%
 Para correr el proyecto:
 <br>
 <strong> Paso 1</strong> <br>
-Hacer un git clone de la rama 8 <br> 
+Hacer un git clone de la rama Sprint-8 <br> 
 $ git clone https://github.com/oscarfedu7/Proyecto-Integrador-Inmobiliaria.git
 
 <strong> Paso 2</strong> <br>
