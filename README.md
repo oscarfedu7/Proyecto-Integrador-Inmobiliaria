@@ -13,10 +13,18 @@ Para correr el proyecto:
 <br>
 <strong> Paso 1</strong> <br>
 Hacer un git clone de la rama 8 
-$got clone ()
+$got clone https://github.com/oscarfedu7/Proyecto-Integrador-Inmobiliaria.git
 
 <strong> Paso 2</strong> <br>
 dentro de la carpeta descargada hacer el npm start 
 $npm start
 o dentro de la carpeta src correrlo con el comando
 $node app.js
+
+
+<strong> Paso 3</strong> <br>
+Para correr el dashboard, dentro del código ya descargado del paso 1, te mueves a la dirección Grupo_8_Bits/src/dashboard/dashboard-react
+y ahí correr el comando npm start
+$ npm start
+
+y de esta manera ambos proyectos se correrán. 
