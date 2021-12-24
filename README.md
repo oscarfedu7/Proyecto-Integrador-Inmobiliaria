@@ -1,7 +1,5 @@
 # Grupo_8_Bits
 
-Punto 2)
-
 Nuestro E-Commerce será una inmobiliaria virtual, la cual tendrá los siguientes productos y/ó servicios:
 
     Construcción de viviendas
