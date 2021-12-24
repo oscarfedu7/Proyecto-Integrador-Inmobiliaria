@@ -1,6 +1,9 @@
 # Grupo_8_Bits
+La rama Sprint-8 en la que contiene todo el código ya terminado, y a continuación se deja el link del herocku (prueba demo del proyecto):
+https://grupo8-bits.herokuapp.com/index
+https://grupo-8-react.herokuapp.com/
+El primer link es del ecommerce, y el segundo link es de un dashboard hecho 100% con react y con APIs.
 
-Punto 2)
 
 Nuestro E-Commerce será una inmobiliaria virtual, la cual tendrá los siguientes productos y/ó servicios:
 
