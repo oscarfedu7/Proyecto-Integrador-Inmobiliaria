@@ -31,3 +31,5 @@ https://trello.com/b/Dp4zWNxp/primer-sprint
 
 link de heroku:
 https://grupo8-bits.herokuapp.com/index
+
+La carpeta del Sprint1 tiene lo que son los wireframes del proyecto.
